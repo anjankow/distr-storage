@@ -1,6 +1,7 @@
 package node
 
 import (
+	"bytes"
 	"data-access-api/internal/config"
 	"encoding/json"
 	"errors"
@@ -21,7 +22,23 @@ type NodeProxy struct {
 func (n NodeProxy) Insert(key string, value json.RawMessage) error {
 	// passes the object to the given node
 	url := "http://" + n.HostName + config.NodePort + "/insert"
-	req, err := http.NewRequest(http.MethodPut, url, nil)
+
+	var body struct {
+		Collection string          `json:"collection"`
+		Key        string          `json:"key"`
+		Value      json.RawMessage `json:"value"`
+	}
+	body.Key = key
+	body.Value = value
+	body.Collection = config.DefaultCollection
+
+	marshalledBody, err := json.Marshal(body)
+	if err != nil {
+		return errors.New("failed to marshal body when sending the request: " + err.Error())
+	}
+	reqBody := bytes.NewBuffer(marshalledBody)
+
+	req, err := http.NewRequest(http.MethodPut, url, reqBody)
 	if err != nil {
 		return errors.New("NodeProxy: failed to create insert request: " + err.Error())
 	}

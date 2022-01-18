@@ -3,7 +3,9 @@ package config
 import "os"
 
 const (
-	NodePort = ":8080"
+	NodePort          = ":8080"
+	DefaultCollection = "DeckList"
+	DbName            = "myDB"
 
 	defaultLocalPort = ":8082"
 )

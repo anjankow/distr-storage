@@ -22,9 +22,10 @@ func NewApp(l *zap.Logger) (app App, err error) {
 func (a App) Insert(key string, value json.RawMessage) error {
 	// forward to a node
 	n := node.NodeProxy{
-		HostName: "mongo2",
+		HostName: "node2",
 		Logger:   a.Logger,
 	}
+
 	return n.Insert(key, value)
 
 }
