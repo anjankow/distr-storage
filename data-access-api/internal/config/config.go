@@ -3,6 +3,8 @@ package config
 import "os"
 
 const (
+	NodePort = ":8080"
+
 	defaultLocalPort = ":8082"
 )
 

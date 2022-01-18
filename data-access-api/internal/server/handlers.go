@@ -37,5 +37,9 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	a.Logger.Debug("handling insert request", zap.String("key", body.Key), zap.String("value", string(body.Value)))
 
+	if err = a.Insert(body.Key, body.Value); err != nil {
+		return http.StatusInternalServerError, errors.New("KEY[" + body.Key + "] insert handler failed: " + err.Error())
+	}
+
 	return 0, nil
 }
