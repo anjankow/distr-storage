@@ -7,10 +7,10 @@ if [ -z $BUCKET_NUM ]; then
 fi
 
 # prepare the docker compose file, it will be started in the last step
-cp docker-compose.template docker-compose.yml
+cp helpers/docker-compose.template docker-compose.yml
 
 # read the services template
-TEMPLATE=$(cat services.template)
+TEMPLATE=$(cat helpers/services.template)
 
 # for each requested bucket, create the service definition in docker-compose file
 for i in $(seq 1 $BUCKET_NUM)
