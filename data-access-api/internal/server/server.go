@@ -29,6 +29,10 @@ func (ser server) registerHandlers(router *mux.Router) {
 
 	router.HandleFunc("/health", healthcheck)
 
+	router.
+		Path("/insert").
+		Methods("PUT").
+		Handler(appHandler{app: ser.app, Handle: insert})
 }
 
 func NewServer(logger *zap.Logger, a *app.App) server {
@@ -64,7 +68,6 @@ func (appHndl appHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		appHndl.app.Logger.Warn("request failed", zap.Error(err))
-		w.Write([]byte(fmt.Sprintln(err)))
 
 		switch status {
 		case http.StatusNotFound:
@@ -74,6 +77,8 @@ func (appHndl appHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		default:
 			http.Error(w, http.StatusText(status), status)
 		}
+
+		w.Write([]byte(fmt.Sprintln(err)))
 		return
 	}
 }
