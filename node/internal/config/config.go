@@ -3,15 +3,16 @@ package config
 import "os"
 
 const (
-	defaultLocalPort = ":8080"
-
-	DefaultDbPort       = ":27017"
+	defaultLocalPort    = ":8080"
 	defaultDatabaseName = "myDB"
+
+	DefaultDbPort = ":27017"
 )
 
 var (
 	port          string
 	connectionURI string
+	dbName        string
 )
 
 // GetPort returns port prepended with `:`
@@ -41,5 +42,16 @@ func GetDbConnectionURI() string {
 }
 
 func GetDatabaseName() string {
-	return defaultDatabaseName
+	if dbName != "" {
+		return port
+	}
+
+	dbNameEnv := os.Getenv("DB_NAME")
+	if dbNameEnv != "" {
+		dbName = ":" + dbNameEnv
+		return dbName
+	}
+
+	dbName = defaultDatabaseName
+	return dbName
 }
