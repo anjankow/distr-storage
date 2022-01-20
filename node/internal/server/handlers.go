@@ -11,10 +11,6 @@ import (
 	"go.uber.org/zap"
 )
 
-const (
-	contentType = "application/json"
-)
-
 func healthcheck(w http.ResponseWriter, _ *http.Request) {
 	w.Write([]byte("all good here"))
 }
@@ -48,19 +44,9 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 func get(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
-	id := r.URL.Query().Get("id")
-	var idErr error
-	if id == "" {
-		idErr = errors.New("missing query parameter: id")
-	}
-
-	collection := r.URL.Query().Get("collection")
-	var collectionErr error
-	if collection == "" {
-		collectionErr = errors.New("missing query parameter: collection")
-	}
-
-	if err := multierr.Combine(idErr, collectionErr); err != nil {
+	var id string
+	var collection string
+	if err := multierr.Combine(getDocumentID(r, &id), getCollection(r, &collection)); err != nil {
 		return http.StatusBadRequest, err
 	}
 
@@ -79,4 +65,42 @@ func get(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 	w.Write(result)
 
 	return 0, nil
+}
+
+func delete(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
+
+	var id string
+	var collection string
+	if err := multierr.Combine(getDocumentID(r, &id), getCollection(r, &collection)); err != nil {
+		return http.StatusBadRequest, err
+	}
+
+	a.Logger.Debug("handling delete request", zap.String("id", id))
+
+	err := a.Delete(r.Context(), collection, id)
+	if err != nil {
+		return http.StatusInternalServerError, errors.New("id[" + id + "] delete handler failed: " + err.Error())
+	}
+
+	return 0, nil
+}
+
+func getCollection(r *http.Request, collection *string) error {
+	coll := r.URL.Query().Get("collection")
+
+	if coll == "" {
+		return errors.New("missing query parameter: collection")
+	}
+
+	*collection = coll
+	return nil
+}
+
+func getDocumentID(r *http.Request, docID *string) error {
+	id := r.URL.Query().Get("id")
+	if id == "" {
+		return errors.New("missing query parameter: id")
+	}
+	*docID = id
+	return nil
 }

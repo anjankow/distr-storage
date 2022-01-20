@@ -53,3 +53,8 @@ func (a App) Get(ctx context.Context, collection string, id string) (json.RawMes
 
 	return result.Content, nil
 }
+
+func (a App) Delete(ctx context.Context, collection string, id string) error {
+
+	return a.bucket.Delete(ctx, collection, id)
+}
