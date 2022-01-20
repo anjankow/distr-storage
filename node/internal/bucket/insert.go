@@ -2,20 +2,19 @@ package bucket
 
 import (
 	"context"
-	"encoding/json"
 	"node/internal/config"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.uber.org/zap"
 )
 
-func (b Bucket) Insert(ctx context.Context, collection string, key string, value json.RawMessage) error {
+func (b Bucket) Insert(ctx context.Context, collection string, id string, value Document) error {
 
 	coll := b.client.Database(config.GetDatabaseName()).Collection(collection)
 
 	doc := bson.M{
-		"_id":   key,
-		"value": value,
+		"_id":     id,
+		"content": value.Content,
 	}
 
 	result, err := coll.InsertOne(ctx, doc)
@@ -23,7 +22,7 @@ func (b Bucket) Insert(ctx context.Context, collection string, key string, value
 		return err
 	}
 
-	b.logger.Debug("inserted", zap.String("key", key), zap.Any("inserted_id", result.InsertedID))
+	b.logger.Debug("inserted", zap.Any("inserted_id", result.InsertedID))
 
 	return nil
 }

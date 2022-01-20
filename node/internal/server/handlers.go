@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"node/internal/app"
 
+	"go.uber.org/multierr"
 	"go.uber.org/zap"
 )
 
@@ -28,19 +29,54 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	var body struct {
 		Collection string          `json:"collection"`
-		Key        string          `json:"key"`
-		Value      json.RawMessage `json:"value"`
+		ID         string          `json:"id"`
+		Content    json.RawMessage `json:"content"`
 	}
 
 	if err = json.Unmarshal(bodyBytes, &body); err != nil {
 		return http.StatusBadRequest, errors.New("invalid body: " + err.Error())
 	}
 
-	a.Logger.Debug("handling insert request", zap.String("key", body.Key), zap.String("value", string(body.Value)))
+	a.Logger.Debug("handling insert request", zap.String("id", body.ID), zap.String("content", string(body.Content)))
 
-	if err = a.Insert(r.Context(), body.Collection, body.Key, body.Value); err != nil {
-		return http.StatusInternalServerError, errors.New("KEY[" + body.Key + "] insert handler failed: " + err.Error())
+	if err = a.Insert(r.Context(), body.Collection, body.ID, body.Content); err != nil {
+		return http.StatusInternalServerError, errors.New("id[" + body.ID + "] insert handler failed: " + err.Error())
 	}
+
+	return 0, nil
+}
+
+func get(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
+
+	id := r.URL.Query().Get("id")
+	var idErr error
+	if id == "" {
+		idErr = errors.New("missing query parameter: id")
+	}
+
+	collection := r.URL.Query().Get("collection")
+	var collectionErr error
+	if collection == "" {
+		collectionErr = errors.New("missing query parameter: collection")
+	}
+
+	if err := multierr.Combine(idErr, collectionErr); err != nil {
+		return http.StatusBadRequest, err
+	}
+
+	a.Logger.Debug("handling get request", zap.String("id", id))
+
+	result, err := a.Get(r.Context(), collection, id)
+	if err != nil {
+		return http.StatusInternalServerError, errors.New("id[" + id + "] get handler failed: " + err.Error())
+	}
+
+	if result == nil {
+		a.Logger.Debug("writing status: not found", zap.String("id", id))
+		return http.StatusNotFound, errors.New("id[" + id + "] document not found")
+	}
+
+	w.Write(result)
 
 	return 0, nil
 }

@@ -30,9 +30,14 @@ func (ser server) registerHandlers(router *mux.Router) {
 	router.HandleFunc("/health", healthcheck)
 
 	router.
-		Path("/insert").
-		Methods("PUT").
+		Path("/doc").
+		Methods(http.MethodPut).
 		Handler(appHandler{app: ser.app, Handle: insert})
+
+	router.
+		Path("/doc").
+		Methods(http.MethodGet).
+		Handler(appHandler{app: ser.app, Handle: get})
 }
 
 func NewServer(logger *zap.Logger, a *app.App) server {
@@ -61,8 +66,6 @@ func (ser server) Run() error {
 }
 
 func (appHndl appHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-
-	appHndl.app.Logger.Debug("request received", zap.String("method", r.Method), zap.String("url", r.URL.Path), zap.String("content-type", r.Header.Get("Content-Type")))
 
 	status, err := appHndl.Handle(appHndl.app, w, r)
 
