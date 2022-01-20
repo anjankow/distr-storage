@@ -2,6 +2,7 @@ package bucket
 
 import (
 	"context"
+	"time"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -24,8 +25,10 @@ func NewConnection(logger *zap.Logger, uri string) (Bucket, error) {
 		return Bucket{}, err
 	}
 
-	// Ping the primary
-	if err := client.Ping(context.Background(), readpref.Primary()); err != nil {
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	if err := client.Ping(ctx, readpref.Primary()); err != nil {
 		return Bucket{}, err
 	}
 
