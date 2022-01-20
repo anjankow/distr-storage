@@ -43,12 +43,12 @@ func GetDbConnectionURI() string {
 
 func GetDatabaseName() string {
 	if dbName != "" {
-		return port
+		return dbName
 	}
 
 	dbNameEnv := os.Getenv("DB_NAME")
 	if dbNameEnv != "" {
-		dbName = ":" + dbNameEnv
+		dbName = dbNameEnv
 		return dbName
 	}
 

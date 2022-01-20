@@ -5,15 +5,19 @@ import (
 	"encoding/json"
 	"node/internal/config"
 
+	"go.mongodb.org/mongo-driver/bson"
 	"go.uber.org/zap"
-	"gopkg.in/mgo.v2/bson"
 )
 
 func (b Bucket) Insert(ctx context.Context, collection string, key string, value json.RawMessage) error {
 
 	coll := b.client.Database(config.GetDatabaseName()).Collection(collection)
 
-	doc := bson.D{{"_id", key}, {"value", value}}
+	doc := bson.M{
+		"_id":   key,
+		"value": value,
+	}
+
 	result, err := coll.InsertOne(ctx, doc)
 	if err != nil {
 		return err
