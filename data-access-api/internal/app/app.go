@@ -1,7 +1,7 @@
 package app
 
 import (
-	"data-access-api/node"
+	nodeproxy "data-access-api/node_proxy"
 	"encoding/json"
 
 	"go.uber.org/zap"
@@ -21,8 +21,8 @@ func NewApp(l *zap.Logger) (app App, err error) {
 
 func (a App) Insert(key string, value json.RawMessage) error {
 	// forward to a node
-	n := node.NodeProxy{
-		HostName: "node2",
+	n := nodeproxy.NodeProxy{
+		HostName: "node0",
 		Logger:   a.Logger,
 	}
 
