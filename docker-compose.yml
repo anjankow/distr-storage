@@ -28,6 +28,9 @@ services:
       - 8084:8080
     env_file:
       - node/.env
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
 
   data-access-api:
     build:
@@ -45,3 +48,6 @@ services:
       - 8085:8080
     env_file:
       - data-access-api/.env
+    volumes:
+      # to rebuild the app with air
+      - ./data-access-api:/go/data-access-api:delegated
