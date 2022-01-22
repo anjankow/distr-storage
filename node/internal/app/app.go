@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"node/internal/bucket"
 	"node/internal/config"
+	"time"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.uber.org/zap"
@@ -29,7 +30,7 @@ func NewApp(l *zap.Logger) (app App, err error) {
 	return
 }
 
-func (a App) Insert(ctx context.Context, collection string, id string, content json.RawMessage) error {
+func (a App) Insert(ctx context.Context, collection string, id string, content json.RawMessage) (time.Time, error) {
 	// save in the dedicated bucket
 	doc := bucket.Document{
 		Content: content,

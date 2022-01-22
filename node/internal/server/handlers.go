@@ -35,9 +35,16 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	a.Logger.Debug("handling insert request", zap.String("id", body.ID), zap.String("content", string(body.Content)))
 
-	if err = a.Insert(r.Context(), body.Collection, body.ID, body.Content); err != nil {
+	insertedTime, err := a.Insert(r.Context(), body.Collection, body.ID, body.Content)
+	if err != nil {
 		return http.StatusInternalServerError, errors.New("id[" + body.ID + "] insert handler failed: " + err.Error())
 	}
+
+	marshalledTime, err := insertedTime.MarshalText()
+	if err != nil {
+		a.Logger.Warn("failed to marshal time: "+err.Error(), zap.String("id", body.ID))
+	}
+	w.Write(marshalledTime)
 
 	return 0, nil
 }
