@@ -2,3 +2,32 @@ version: '3.1'
 
 services:
 
+  data-access-api:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "data-access-api"
+    image: cc/data-access-api
+    tty: true
+    container_name: data-access-api
+    ports:
+      - 8085:8080
+    env_file:
+      - data-access-api/.env
+    volumes:
+      # to rebuild the app with air
+      - ./data-access-api:/go/data-access-api:delegated
+
+  mongo-express0:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8087:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo0:27017/
+    depends_on:
+      - mongo0

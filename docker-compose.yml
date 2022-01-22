@@ -2,15 +2,23 @@ version: '3.1'
 
 services:
 
-  mongo0:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+  data-access-api:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "data-access-api"
+    image: cc/data-access-api
+    tty: true
+    container_name: data-access-api
+    ports:
+      - 8085:8080
+    env_file:
+      - data-access-api/.env
     volumes:
-      - /tmp/storage-system/db0:/data/db:rw
-      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      # to rebuild the app with air
+      - ./data-access-api:/go/data-access-api:delegated
 
   mongo-express0:
     image: mongo-express
@@ -23,6 +31,15 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo0:27017/
     depends_on:
       - mongo0
+  mongo0:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db0:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
   node0:
     build:
@@ -36,30 +53,39 @@ services:
     depends_on:
       - mongo0
     container_name: node0
-    ports:
-      - 8084:8080
     env_file:
       - node/.env
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
 
-  data-access-api:
+
+  mongo1:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db1:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  node1:
     build:
       network: host
       context: .
       dockerfile: deployment/go-services/Dockerfile
       args:
-        SERVICE_NAME: "data-access-api"
-    image: cc/data-access-api
+        SERVICE_NAME: "node"
+    image: cc/node
     tty: true
     depends_on:
-      - node0
-    container_name: data-access-api
-    ports:
-      - 8085:8080
+      - mongo1
+    container_name: node1
     env_file:
-      - data-access-api/.env
+      - node/.env
     volumes:
       # to rebuild the app with air
-      - ./data-access-api:/go/data-access-api:delegated
+      - ./node:/go/node:delegated
+
+
