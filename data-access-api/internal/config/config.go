@@ -4,14 +4,15 @@ import "os"
 
 const (
 	NodePort          = ":8080"
-	DefaultCollection = "DeckList"
+	defaultCollection = "testCollection"
 	DbName            = "myDB"
 
 	defaultLocalPort = ":8082"
 )
 
 var (
-	port string
+	port           string
+	collectionName string
 )
 
 // GetPort returns port prepended with `:`
@@ -28,4 +29,13 @@ func GetPort() string {
 
 	port = defaultLocalPort
 	return port
+}
+
+func GetCollectionName() string {
+	if collectionName != "" {
+		return collectionName
+	}
+
+	collectionName = defaultCollection
+	return collectionName
 }

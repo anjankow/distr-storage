@@ -6,12 +6,9 @@ import (
 	"errors"
 	"io/ioutil"
 	"net/http"
+	"time"
 
 	"go.uber.org/zap"
-)
-
-const (
-	contentType = "application/json"
 )
 
 func healthcheck(w http.ResponseWriter, _ *http.Request) {
@@ -37,9 +34,24 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	a.Logger.Debug("handling insert request", zap.String("key", body.Key), zap.String("value", string(body.Value)))
 
-	if err = a.Insert(body.Key, body.Value); err != nil {
+	node, ts, err := a.Insert(body.Key, body.Value)
+	if err != nil {
 		return http.StatusInternalServerError, errors.New("KEY[" + body.Key + "] insert handler failed: " + err.Error())
 	}
+
+	var insertRsp struct {
+		NodeName  string    `json:"node"`
+		Timestamp time.Time `json:"time"`
+	}
+	insertRsp.NodeName = node
+	insertRsp.Timestamp = ts
+
+	marshalledRsp, err := json.Marshal(insertRsp)
+	if err != nil {
+		return http.StatusInternalServerError, errors.New("failed to marshal response body: " + err.Error())
+	}
+
+	w.Write(marshalledRsp)
 
 	return 0, nil
 }

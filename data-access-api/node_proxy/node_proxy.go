@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"time"
 
 	"go.uber.org/zap"
 )
@@ -19,33 +20,38 @@ type NodeProxy struct {
 	Logger   *zap.Logger
 }
 
-func (n NodeProxy) Insert(key string, value json.RawMessage) error {
+type insertResponse struct {
+	Timestamp time.Time `json:"ts"`
+}
+
+func (n NodeProxy) Insert(id string, content json.RawMessage) (time.Time, error) {
 	// passes the object to the given node
-	url := "http://" + n.HostName + config.NodePort + "/insert"
+	url := "http://" + n.HostName + config.NodePort + "/doc"
 
 	var body struct {
 		Collection string          `json:"collection"`
-		Key        string          `json:"key"`
-		Value      json.RawMessage `json:"value"`
+		ID         string          `json:"id"`
+		Content    json.RawMessage `json:"content"`
 	}
-	body.Key = key
-	body.Value = value
-	body.Collection = config.DefaultCollection
+	body.ID = id
+	body.Content = content
+	body.Collection = config.GetCollectionName()
 
 	marshalledBody, err := json.Marshal(body)
 	if err != nil {
-		return errors.New("failed to marshal body when sending the request: " + err.Error())
+		return time.Time{}, errors.New("failed to marshal body when sending the request: " + err.Error())
 	}
 	reqBody := bytes.NewBuffer(marshalledBody)
 
 	req, err := http.NewRequest(http.MethodPut, url, reqBody)
 	if err != nil {
-		return errors.New("NodeProxy: failed to create insert request: " + err.Error())
+		return time.Time{}, errors.New("NodeProxy: failed to create insert request: " + err.Error())
 	}
 
-	var resp *http.Response
+	var insertTime time.Time
+
 	for i := 0; i < maxTrials; i++ {
-		resp, err = http.DefaultClient.Do(req)
+		resp, err := http.DefaultClient.Do(req)
 
 		if err != nil {
 			n.Logger.Debug("failed to do request: "+err.Error(), zap.Int("trial", i))
@@ -54,18 +60,39 @@ func (n NodeProxy) Insert(key string, value json.RawMessage) error {
 		defer resp.Body.Close()
 
 		if resp.StatusCode != http.StatusOK {
-			err = errors.New("return code: " + resp.Status)
-			n.Logger.Debug("request return code: "+resp.Status, zap.Int("trial", i))
+			n.Logger.Debug("insert request return code: "+resp.Status, zap.Int("trial", i))
 			continue
 		}
 
-		// no errors or failed status code - no need to repeat the request
+		var respBytes []byte
+		n.Logger.Error("response ", zap.Any("cont len", resp.ContentLength))
+
+		if _, err = resp.Body.Read(respBytes); err != nil {
+			n.Logger.Error("failed to read the insert response", zap.Error(err))
+			// this error doesn't mean that the insert failed, just the response info can't be read
+			err = nil
+
+			break
+		}
+		n.Logger.Info("reposne bytes: " + string(respBytes))
+
+		// var response struct {
+		// 	Timestamp time.Time `json:"ts"`
+		// }
+		response := insertResponse{}
+		if err := json.Unmarshal(respBytes, &response); err != nil {
+			n.Logger.Error("failed to unmarshal the insert response", zap.Error(err), zap.Any("response", respBytes))
+			// this error doesn't mean that the insert failed, just the response info can't be read
+			err = nil
+		}
+		insertTime = response.Timestamp
+
 		break
 	}
 
 	if err != nil {
-		return errors.New("NodeProxy: " + err.Error())
+		return time.Time{}, errors.New("NodeProxy: " + err.Error())
 	}
 
-	return nil
+	return insertTime, err
 }

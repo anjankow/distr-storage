@@ -30,7 +30,7 @@ func (ser server) registerHandlers(router *mux.Router) {
 	router.HandleFunc("/health", healthcheck)
 
 	router.
-		Path("/insert").
+		Path("/doc").
 		Methods("PUT").
 		Handler(appHandler{app: ser.app, Handle: insert})
 }
