@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
 	"go.uber.org/zap"
 )
 
@@ -20,12 +21,25 @@ func (b Bucket) Insert(ctx context.Context, collection string, id string, value 
 		"timestamp": insertTime,
 	}
 
-	result, err := coll.InsertOne(ctx, doc)
-	if err != nil {
-		return time.Time{}, err
-	}
+	_, err := coll.InsertOne(ctx, doc)
 
-	b.logger.Debug("inserted", zap.Any("inserted_id", result.InsertedID))
+	if mongo.IsDuplicateKeyError(err) {
+		// if the key exists already, update the record
+		_, err := coll.UpdateByID(ctx, id, doc)
+		if err != nil {
+			return time.Time{}, err
+		}
+
+		b.logger.Debug("updated", zap.Any("updated_id", id))
+	} else {
+		// if this wasn't duplicate key error, return
+		if err != nil {
+			return time.Time{}, err
+		}
+
+		// another case is that err == nil -> inserted successfully
+		b.logger.Debug("inserted", zap.Any("inserted_id", id))
+	}
 
 	return insertTime, nil
 }
