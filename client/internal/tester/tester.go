@@ -24,9 +24,11 @@ type Tester struct {
 }
 
 type reportInfo struct {
-	timeStarted   time.Time
-	nodesInserted []nodeOperation
-	nodesRead     []nodeOperation
+	timeStarted      time.Time
+	insertedToNodes  []nodeOperation
+	readFromNodes    []nodeOperation
+	deletedFromNodes []nodeOperation
+	allInsertedData  string
 }
 type nodeOperation struct {
 	NodeName  string
@@ -43,7 +45,8 @@ func NewTester(logger *zap.Logger, clnt *client.Client) Tester {
 
 func (t *Tester) Run(inputData map[string]interface{}) {
 	if err := t.startStorageSystem(); err != nil {
-		t.logger.Panic("storage system not started, failure!", zap.Error(err))
+		t.stop()
+		t.logger.Panic("storage system failure!", zap.Error(err))
 		return
 	}
 
@@ -51,7 +54,7 @@ func (t *Tester) Run(inputData map[string]interface{}) {
 
 	t.randomlyRead(inputData)
 
-	t.randomlyDelete()
+	t.randomlyDelete(inputData)
 
 	t.stop()
 
@@ -89,7 +92,8 @@ func (t *Tester) startStorageSystem() error {
 	t.storageSystemProcess = process
 	t.report.timeStarted = time.Now()
 	t.totalNumOfNodes = numberOfNodes
-	return nil
+
+	return t.client.ConfigureSystem(numberOfNodes)
 }
 
 func (t *Tester) insertAllKeys(inputData map[string]interface{}) {
@@ -101,7 +105,7 @@ func (t *Tester) insertAllKeys(inputData map[string]interface{}) {
 
 		if err != nil {
 
-			t.logger.Warn("failed to insert: "+err.Error(), zap.String("key", key))
+			t.logger.Error("failed to insert: "+err.Error(), zap.String("key", key))
 
 			continue
 		}
@@ -112,9 +116,16 @@ func (t *Tester) insertAllKeys(inputData map[string]interface{}) {
 			Timestamp: insertTime,
 		}
 
-		t.report.nodesInserted = append(t.report.nodesInserted, insertedInfo)
+		t.report.insertedToNodes = append(t.report.insertedToNodes, insertedInfo)
 
 	}
+
+	data, err := t.client.GetAllData()
+	if err != nil {
+		t.logger.Error("failed to get all inserted data: " + err.Error())
+	}
+	t.report.allInsertedData = data
+
 }
 
 func (t *Tester) randomlyRead(inputData map[string]interface{}) {
@@ -125,7 +136,7 @@ func (t *Tester) randomlyRead(inputData map[string]interface{}) {
 	for {
 
 		// break when desired number of nodes is accessed
-		if len(t.report.nodesRead) >= t.getMinNumOfAccessedNodes() {
+		if len(t.report.readFromNodes) >= t.getMinNumOfAccessedNodes() {
 			break
 		}
 
@@ -147,13 +158,38 @@ func (t *Tester) randomlyRead(inputData map[string]interface{}) {
 			Key:       key,
 			Timestamp: time.Now(),
 		}
-		t.report.nodesRead = append(t.report.nodesRead, info)
+		t.report.readFromNodes = append(t.report.readFromNodes, info)
 	}
 
 }
 
-func (t *Tester) randomlyDelete() {
+func (t *Tester) randomlyDelete(inputData map[string]interface{}) {
 
+	keys := reflect.ValueOf(inputData).MapKeys()
+	rand.Seed(time.Now().UnixNano())
+
+	for i := 0; i < 3; i++ {
+
+		index := rand.Intn(len(keys))
+
+		key, ok := keys[index].Interface().(string)
+		if !ok {
+			t.logger.Warn("invalid key, can't cast to string", zap.String("key", key))
+			continue
+		}
+
+		nodeName, err := t.client.Delete(key)
+		if err != nil {
+			t.logger.Warn("failed to delete the element: %v" + key)
+		}
+
+		info := nodeOperation{
+			NodeName:  nodeName,
+			Key:       key,
+			Timestamp: time.Now(),
+		}
+		t.report.deletedFromNodes = append(t.report.deletedFromNodes, info)
+	}
 }
 
 func (t *Tester) stop() {
@@ -178,12 +214,17 @@ func (t Tester) GenerateReport() string {
 	report += fmt.Sprintf("Created %d nodes.\n\n", t.totalNumOfNodes)
 
 	report += "# Inserting the elements\n"
-	for i, info := range t.report.nodesInserted {
+	for i, info := range t.report.insertedToNodes {
 		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
 	}
 
 	report += "# Randomly reading the elements\n"
-	for i, info := range t.report.nodesRead {
+	for i, info := range t.report.readFromNodes {
+		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
+	}
+
+	report += "# Randomly deleting the elements\n"
+	for i, info := range t.report.deletedFromNodes {
 		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
 	}
 

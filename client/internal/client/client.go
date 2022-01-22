@@ -24,6 +24,14 @@ func (c Client) Get(key string) (node string, err error) {
 	return "node0", nil
 }
 
+func (c Client) GetAllData() (data string, err error) {
+	return "all the data", nil
+}
+
 func (c Client) GetRange() (node string, err error) {
 	return "node0", nil
+}
+
+func (c Client) ConfigureSystem(numberOfNodes int) error {
+	return nil
 }
