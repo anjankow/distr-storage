@@ -89,3 +89,32 @@ services:
       - ./node:/go/node:delegated
 
 
+  mongo2:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db2:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  node2:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "node"
+    image: cc/node
+    tty: true
+    depends_on:
+      - mongo2
+    container_name: node2
+    env_file:
+      - node/.env
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
+
+
