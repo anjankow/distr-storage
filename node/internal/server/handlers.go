@@ -34,7 +34,7 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusBadRequest, errors.New("invalid body: " + err.Error())
 	}
 
-	a.Logger.Debug("handling insert request", zap.String("id", body.ID))
+	a.Logger.Debug("handling insert request", zap.String("id", body.ID), zap.String("collection", body.Collection))
 
 	insertedTime, err := a.Insert(r.Context(), body.Collection, body.ID, body.Content)
 	if err != nil {
@@ -67,7 +67,7 @@ func get(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusBadRequest, err
 	}
 
-	a.Logger.Debug("handling get request", zap.String("id", id))
+	a.Logger.Debug("handling get request", zap.String("id", id), zap.String("collection", collection))
 
 	result, err := a.Get(r.Context(), collection, id)
 	if err != nil {
@@ -92,7 +92,7 @@ func delete(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusBadRequest, err
 	}
 
-	a.Logger.Debug("handling delete request", zap.String("id", id))
+	a.Logger.Debug("handling delete request", zap.String("id", id), zap.String("collection", collection))
 
 	err := a.Delete(r.Context(), collection, id)
 	if err != nil {
