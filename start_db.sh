@@ -4,6 +4,8 @@ BUCKET_NUM=$1
 if [ -z $BUCKET_NUM ]; then
     echo "Number of buckets not specified, defaults to 3"
     BUCKET_NUM=3
+else
+    echo "Number of buckets: ${BUCKET_NUM}"
 fi
 
 # prepare the docker compose file, it will be started in the last step
@@ -25,5 +27,7 @@ do
     echo -e "\n" >> docker-compose.yml
 
 done
+
+cat docker-compose.yml
 
 docker-compose up

@@ -13,6 +13,10 @@ import (
 	"go.uber.org/zap"
 )
 
+const (
+	startScriptPath = "start_db.sh"
+)
+
 type Tester struct {
 	logger *zap.Logger
 	client *client.Client
@@ -84,11 +88,12 @@ func (t *Tester) startStorageSystem() error {
 			errFile,
 		},
 	}
-	process, err := os.StartProcess("start_db.sh", []string{fmt.Sprint(numberOfNodes)}, &attr)
+	process, err := os.StartProcess(startScriptPath, []string{startScriptPath, fmt.Sprint(numberOfNodes)}, &attr)
 	if err != nil {
 		return err
 	}
 
+	t.logger.Info("starting the system, number of nodes: " + fmt.Sprint(numberOfNodes))
 	t.storageSystemProcess = process
 	t.report.timeStarted = time.Now()
 	t.totalNumOfNodes = numberOfNodes
@@ -218,7 +223,7 @@ func (t *Tester) stop() {
 }
 
 func (t Tester) getMinNumOfAccessedNodes() int {
-	desiredNumber := 3
+	desiredNumber := 5
 	if t.totalNumOfNodes < desiredNumber {
 		return t.totalNumOfNodes
 	}
