@@ -6,25 +6,25 @@ import (
 )
 
 const (
-	defaultNumberOfNodes int = 3
+	defaultNumberOfNodes  int    = 3
+	defaultCollectionName string = "myCollection"
 )
 
 var (
-	inputFile string
+	inputFile      string
+	apiAddress     string
+	collectionName string
 )
 
 func GetInputFilePath() string {
+
 	if inputFile != "" {
 		return inputFile
 	}
 
-	file := os.Getenv("INPUT_PATH")
-	if file != "" {
-		inputFile = file
-		return inputFile
-	}
+	inputFile := os.Getenv("INPUT_PATH")
 
-	return ""
+	return inputFile
 }
 
 func GetNumberOfNodes() int {
@@ -41,4 +41,27 @@ func GetNumberOfNodes() int {
 
 	return int(number)
 
+}
+
+func GetApiAddr() string {
+	if apiAddress != "" {
+		return apiAddress
+	}
+
+	apiAddress := os.Getenv("API_ADDR")
+
+	return apiAddress
+}
+
+func GetCollectionName() string {
+	if collectionName != "" {
+		return collectionName
+	}
+
+	collectionName := os.Getenv("COLLECTION_NAME")
+	if collectionName == "" {
+		collectionName = defaultCollectionName
+	}
+
+	return collectionName
 }

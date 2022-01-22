@@ -93,7 +93,7 @@ func (t *Tester) startStorageSystem() error {
 	t.report.timeStarted = time.Now()
 	t.totalNumOfNodes = numberOfNodes
 
-	return t.client.ConfigureSystem(numberOfNodes)
+	return t.client.ConfigureSystem(numberOfNodes, config.GetCollectionName())
 }
 
 func (t *Tester) insertAllKeys(inputData map[string]interface{}) {
@@ -193,6 +193,20 @@ func (t *Tester) randomlyDelete(inputData map[string]interface{}) {
 }
 
 func (t *Tester) stop() {
+	pwd, err := os.Getwd()
+	if err != nil {
+		var attr = os.ProcAttr{
+			Env: os.Environ(),
+			Dir: pwd + "/..",
+		}
+
+		_, err := os.StartProcess("docker-compose", []string{"down"}, &attr)
+		if err != nil {
+			t.logger.Error("failed to execute docker-compose down", zap.Error(err))
+		}
+
+	}
+
 	if err := t.storageSystemProcess.Kill(); err != nil {
 		t.logger.Error("failed to kill the storage system", zap.Error(err))
 	}
@@ -211,7 +225,9 @@ func (t Tester) GenerateReport() string {
 	var report string
 	report += "# Start\n"
 	report += fmt.Sprintf("System started at %s.\n", t.report.timeStarted.Format(time.RFC3339))
-	report += fmt.Sprintf("Created %d nodes.\n\n", t.totalNumOfNodes)
+	report += fmt.Sprintf("Created %d nodes.\n", t.totalNumOfNodes)
+	report += fmt.Sprintf("Saving to collection: %s.\n", config.GetCollectionName())
+	report += "\n"
 
 	report += "# Inserting the elements\n"
 	for i, info := range t.report.insertedToNodes {
