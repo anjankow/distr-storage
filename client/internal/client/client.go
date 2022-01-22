@@ -3,6 +3,7 @@ package client
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 
 	"go.uber.org/zap"
 )
@@ -54,5 +55,32 @@ func (c Client) GetRange() (node string, err error) {
 
 func (c Client) ConfigureSystem(numberOfNodes int, collection string) error {
 
+	nodes := []string{}
+	for i := 0; i < numberOfNodes; i++ {
+		nodes = append(nodes, fmt.Sprintf("node%d:8080", i))
+	}
+	reqBody := configReq{
+		Collection: collection,
+		Nodes:      nodes,
+	}
+
+	if err := configRequest(reqBody); err != nil {
+		return err
+	}
+
+	c.logger.Info("successfully configured")
+
 	return nil
+}
+
+func (c Client) Wait() {
+	for {
+		err := healthRequest()
+		if err != nil {
+			continue
+		}
+
+		break
+	}
+	c.logger.Info("system responding")
 }

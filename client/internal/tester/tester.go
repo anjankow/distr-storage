@@ -93,6 +93,8 @@ func (t *Tester) startStorageSystem() error {
 	t.report.timeStarted = time.Now()
 	t.totalNumOfNodes = numberOfNodes
 
+	t.client.Wait()
+
 	return t.client.ConfigureSystem(numberOfNodes, config.GetCollectionName())
 }
 
