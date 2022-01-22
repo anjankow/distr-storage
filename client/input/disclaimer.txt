@@ -1,0 +1,2 @@
+DeckLists source:
+https://www.kaggle.com/mylesoneill/magic-the-gathering-cards
