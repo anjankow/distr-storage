@@ -89,3 +89,20 @@ func (n NodeProxy) Insert(id string, content json.RawMessage) (time.Time, error)
 
 	return insertTime, err
 }
+
+func (n NodeProxy) WaitReady() {
+	url := "http://" + n.HostAddr + "/health"
+
+	for {
+		resp, err := http.DefaultClient.Get(url)
+		if err != nil {
+			continue
+		}
+		if resp.StatusCode != http.StatusOK {
+			continue
+		}
+
+		break
+	}
+
+}
