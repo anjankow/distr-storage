@@ -4,7 +4,9 @@ import (
 	"client/internal/client"
 	"client/internal/config"
 	"fmt"
+	"math/rand"
 	"os"
+	"reflect"
 	"time"
 
 	"go.uber.org/multierr"
@@ -16,16 +18,17 @@ type Tester struct {
 	client *client.Client
 
 	storageSystemProcess *os.Process
+	totalNumOfNodes      int
 
 	report reportInfo
 }
 
 type reportInfo struct {
-	timeStarted     time.Time
-	totalNumOfNodes int
-	nodesInserted   []inserted
+	timeStarted   time.Time
+	nodesInserted []nodeOperation
+	nodesRead     []nodeOperation
 }
-type inserted struct {
+type nodeOperation struct {
 	NodeName  string
 	Key       string
 	Timestamp time.Time
@@ -46,7 +49,7 @@ func (t *Tester) Run(inputData map[string]interface{}) {
 
 	t.insertAllKeys(inputData)
 
-	t.randomlyRead()
+	t.randomlyRead(inputData)
 
 	t.randomlyDelete()
 
@@ -85,7 +88,7 @@ func (t *Tester) startStorageSystem() error {
 
 	t.storageSystemProcess = process
 	t.report.timeStarted = time.Now()
-	t.report.totalNumOfNodes = numberOfNodes
+	t.totalNumOfNodes = numberOfNodes
 	return nil
 }
 
@@ -103,7 +106,7 @@ func (t *Tester) insertAllKeys(inputData map[string]interface{}) {
 			continue
 		}
 
-		insertedInfo := inserted{
+		insertedInfo := nodeOperation{
 			NodeName:  node,
 			Key:       key,
 			Timestamp: insertTime,
@@ -114,8 +117,39 @@ func (t *Tester) insertAllKeys(inputData map[string]interface{}) {
 	}
 }
 
-func (t *Tester) randomlyRead() {
-	time.Sleep(8 * time.Second)
+func (t *Tester) randomlyRead(inputData map[string]interface{}) {
+
+	keys := reflect.ValueOf(inputData).MapKeys()
+	rand.Seed(time.Now().UnixNano())
+
+	for {
+
+		// break when desired number of nodes is accessed
+		if len(t.report.nodesRead) >= t.getMinNumOfAccessedNodes() {
+			break
+		}
+
+		index := rand.Intn(len(keys))
+
+		key, ok := keys[index].Interface().(string)
+		if !ok {
+			t.logger.Warn("invalid key, can't cast to string", zap.String("key", key))
+			continue
+		}
+
+		nodeName, err := t.client.Get(key)
+		if err != nil {
+			t.logger.Warn("failed to get the element: %v" + key)
+		}
+
+		info := nodeOperation{
+			NodeName:  nodeName,
+			Key:       key,
+			Timestamp: time.Now(),
+		}
+		t.report.nodesRead = append(t.report.nodesRead, info)
+	}
+
 }
 
 func (t *Tester) randomlyDelete() {
@@ -128,14 +162,28 @@ func (t *Tester) stop() {
 	}
 }
 
+func (t Tester) getMinNumOfAccessedNodes() int {
+	desiredNumber := 3
+	if t.totalNumOfNodes < desiredNumber {
+		return t.totalNumOfNodes
+	}
+
+	return desiredNumber
+}
+
 func (t Tester) GenerateReport() string {
 	var report string
 	report += "# Start\n"
-	report += fmt.Sprintf("System started at %s\n", t.report.timeStarted.Format(time.RFC3339))
-	report += fmt.Sprintf("Created %d nodes\n\n", t.report.totalNumOfNodes)
+	report += fmt.Sprintf("System started at %s.\n", t.report.timeStarted.Format(time.RFC3339))
+	report += fmt.Sprintf("Created %d nodes.\n\n", t.totalNumOfNodes)
 
 	report += "# Inserting the elements\n"
 	for i, info := range t.report.nodesInserted {
+		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
+	}
+
+	report += "# Randomly reading the elements\n"
+	for i, info := range t.report.nodesRead {
 		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
 	}
 
