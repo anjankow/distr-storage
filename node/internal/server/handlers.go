@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"node/internal/app"
+	"time"
 
 	"go.uber.org/multierr"
 	"go.uber.org/zap"
@@ -40,11 +41,20 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusInternalServerError, errors.New("id[" + body.ID + "] insert handler failed: " + err.Error())
 	}
 
-	marshalledTime, err := insertedTime.MarshalText()
+	var response struct {
+		Timestamp time.Time `json:"ts"`
+	}
+	response.Timestamp = insertedTime
+	marshalledRsp, err := json.Marshal(response)
 	if err != nil {
 		a.Logger.Warn("failed to marshal time: "+err.Error(), zap.String("id", body.ID))
+	} else {
+		a.Logger.Debug("writing the response: " + string(marshalledRsp))
 	}
-	w.Write(marshalledTime)
+
+	if _, err := w.Write(marshalledRsp); err != nil {
+		a.Logger.Warn("failed to write the response: "+err.Error(), zap.String("id", body.ID), zap.String("reponse", string(marshalledRsp)))
+	}
 
 	return 0, nil
 }
