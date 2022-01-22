@@ -5,6 +5,7 @@ import (
 	"data-access-api/internal/config"
 	"encoding/json"
 	"errors"
+	"io/ioutil"
 	"net/http"
 	"time"
 
@@ -18,10 +19,6 @@ const (
 type NodeProxy struct {
 	HostName string
 	Logger   *zap.Logger
-}
-
-type insertResponse struct {
-	Timestamp time.Time `json:"ts"`
 }
 
 func (n NodeProxy) Insert(id string, content json.RawMessage) (time.Time, error) {
@@ -64,22 +61,18 @@ func (n NodeProxy) Insert(id string, content json.RawMessage) (time.Time, error)
 			continue
 		}
 
-		var respBytes []byte
-		n.Logger.Error("response ", zap.Any("cont len", resp.ContentLength))
-
-		if _, err = resp.Body.Read(respBytes); err != nil {
+		respBytes, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
 			n.Logger.Error("failed to read the insert response", zap.Error(err))
 			// this error doesn't mean that the insert failed, just the response info can't be read
 			err = nil
 
 			break
 		}
-		n.Logger.Info("reposne bytes: " + string(respBytes))
 
-		// var response struct {
-		// 	Timestamp time.Time `json:"ts"`
-		// }
-		response := insertResponse{}
+		var response struct {
+			Timestamp time.Time `json:"ts"`
+		}
 		if err := json.Unmarshal(respBytes, &response); err != nil {
 			n.Logger.Error("failed to unmarshal the insert response", zap.Error(err), zap.Any("response", respBytes))
 			// this error doesn't mean that the insert failed, just the response info can't be read
