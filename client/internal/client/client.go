@@ -41,8 +41,13 @@ func (c Client) Delete(key string) (node string, err error) {
 	return "node0", nil
 }
 
-func (c Client) Get(key string) (node string, err error) {
-	return "node0", nil
+func (c Client) Get(key string) (value json.RawMessage, node string, err error) {
+	rspBody, err := getRequest(key)
+	if err != nil {
+		return nil, "", err
+	}
+
+	return rspBody.Value, rspBody.NodeName, nil
 }
 
 func (c Client) GetAllData() (data string, err error) {

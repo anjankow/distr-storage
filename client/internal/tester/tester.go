@@ -150,9 +150,10 @@ func (t *Tester) randomlyRead(inputData map[string]interface{}) {
 			continue
 		}
 
-		nodeName, err := t.client.Get(key)
+		value, nodeName, err := t.client.Get(key)
 		if err != nil {
-			t.logger.Warn("failed to get the element: %v" + key)
+			t.logger.Warn("failed to get the element: "+key, zap.Error(err))
+			continue
 		}
 
 		info := nodeOperation{
@@ -161,6 +162,8 @@ func (t *Tester) randomlyRead(inputData map[string]interface{}) {
 			Timestamp: time.Now(),
 		}
 		t.report.readFromNodes = append(t.report.readFromNodes, info)
+
+		t.logger.Info("value read", zap.String("key", key), zap.Any("value", value))
 	}
 
 }
