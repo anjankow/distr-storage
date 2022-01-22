@@ -17,13 +17,13 @@ const (
 )
 
 type NodeProxy struct {
-	HostName string
+	HostAddr string
 	Logger   *zap.Logger
 }
 
 func (n NodeProxy) Insert(id string, content json.RawMessage) (time.Time, error) {
 	// passes the object to the given node
-	url := "http://" + n.HostName + config.NodePort + "/doc"
+	url := "http://" + n.HostAddr + "/doc"
 
 	var body struct {
 		Collection string          `json:"collection"`

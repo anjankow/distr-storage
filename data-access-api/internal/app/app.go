@@ -10,6 +10,9 @@ import (
 
 type App struct {
 	Logger *zap.Logger
+
+	nodes      []string
+	collection string
 }
 
 func NewApp(l *zap.Logger) (app App, err error) {
@@ -20,11 +23,17 @@ func NewApp(l *zap.Logger) (app App, err error) {
 	return
 }
 
+func (a *App) Configure(collection string, nodes []string) {
+	// race condition, should be guarded with mutex, but for this use case I'll keep it this way
+	a.collection = collection
+	a.nodes = nodes
+}
+
 func (a App) Insert(key string, value json.RawMessage) (string, time.Time, error) {
 	// forward to a node
 	node := "node0"
 	n := nodeproxy.NodeProxy{
-		HostName: node,
+		HostAddr: node,
 		Logger:   a.Logger,
 	}
 
