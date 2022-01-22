@@ -32,7 +32,7 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusBadRequest, errors.New("invalid body: " + err.Error())
 	}
 
-	a.Logger.Debug("handling insert request", zap.String("key", body.Key), zap.String("value", string(body.Value)))
+	a.Logger.Debug("handling insert request", zap.String("key", body.Key))
 
 	node, ts, err := a.Insert(body.Key, body.Value)
 	if err != nil {

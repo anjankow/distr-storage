@@ -3,7 +3,9 @@ package app
 import (
 	nodeproxy "data-access-api/node_proxy"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"hash/adler32"
 	"time"
 
 	"go.uber.org/zap"
@@ -33,26 +35,43 @@ func (a *App) Configure(collection string, nodes []string) {
 			HostAddr: nodeAddr,
 			Logger:   a.Logger,
 		}
-		a.Logger.Info(fmt.Sprintf(nodeAddr, " waiting..."))
+		a.Logger.Info(fmt.Sprint(nodeAddr, " waiting..."))
 		node.WaitReady()
-		a.Logger.Info(fmt.Sprintf(nodeAddr, " ready"))
+		a.Logger.Info(fmt.Sprint(nodeAddr, " ready"))
 		a.nodes = append(a.nodes, node)
 	}
 }
 
-func (a App) Insert(key string, value json.RawMessage) (string, time.Time, error) {
-	// forward to a node
-	node := "node0"
-	n := nodeproxy.NodeProxy{
-		HostAddr: node,
-		Logger:   a.Logger,
+func (a App) getNodeIdx(key string) (int, error) {
+	hashFunc := adler32.New()
+	if _, err := hashFunc.Write(([]byte)(key)); err != nil {
+		return 0, errors.New("failed to initialize hash function: " + err.Error())
 	}
 
-	ts, err := n.Insert(key, value)
+	sum := hashFunc.Sum32()
+	if len(a.nodes) == 0 {
+		return 0, errors.New("no nodes configured")
+	}
+	nodeIdx := sum % uint32(len(a.nodes))
+	a.Logger.Debug("hash function", zap.Uint32("node_idx", nodeIdx), zap.String("key", key), zap.Uint32("hash", sum))
+
+	return int(nodeIdx), nil
+}
+
+func (a App) Insert(key string, value json.RawMessage) (string, time.Time, error) {
+
+	nodeIdx, err := a.getNodeIdx(key)
 	if err != nil {
 		return "", time.Time{}, err
 	}
 
-	return node, ts, nil
+	node := a.nodes[nodeIdx]
+
+	ts, err := node.Insert(key, value)
+	if err != nil {
+		return "", time.Time{}, err
+	}
+
+	return node.HostAddr, ts, nil
 
 }
