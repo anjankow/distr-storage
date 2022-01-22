@@ -3,16 +3,14 @@ package config
 import "os"
 
 const (
-	NodePort          = ":8080"
-	defaultCollection = "testCollection"
-	DbName            = "myDB"
+	NodePort = ":8080"
+	DbName   = "myDB"
 
 	defaultLocalPort = ":8082"
 )
 
 var (
-	port           string
-	collectionName string
+	port string
 )
 
 // GetPort returns port prepended with `:`
@@ -29,13 +27,4 @@ func GetPort() string {
 
 	port = defaultLocalPort
 	return port
-}
-
-func GetCollectionName() string {
-	if collectionName != "" {
-		return collectionName
-	}
-
-	collectionName = defaultCollection
-	return collectionName
 }

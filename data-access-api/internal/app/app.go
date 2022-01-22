@@ -67,11 +67,29 @@ func (a App) Insert(key string, value json.RawMessage) (string, time.Time, error
 
 	node := a.nodes[nodeIdx]
 
-	ts, err := node.Insert(key, value)
+	ts, err := node.Insert(a.collection, key, value)
 	if err != nil {
 		return "", time.Time{}, err
 	}
 
 	return node.HostAddr, ts, nil
+
+}
+
+func (a App) Get(key string) (string, json.RawMessage, error) {
+
+	nodeIdx, err := a.getNodeIdx(key)
+	if err != nil {
+		return "", nil, err
+	}
+
+	node := a.nodes[nodeIdx]
+
+	value, err := node.Get(a.collection, key)
+	if err != nil {
+		return "", nil, err
+	}
+
+	return node.HostAddr, value, nil
 
 }
