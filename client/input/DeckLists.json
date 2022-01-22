@@ -1,3812 +1,3177 @@
 {
-    {
-        "code": "KTK",
+    "2KTK": {
         "fileName": "AbzanSiege",
         "name": "Abzan Siege",
         "releaseDate": "2014-09-26"
     },
-    {
-        "code": "C18",
+    "7C18": {
         "fileName": "AdaptiveEnchantment",
         "name": "Adaptive Enchantment",
         "releaseDate": "2018-08-10"
     },
-    {
-        "code": "BTD",
+    "12BTD": {
         "fileName": "Aerodoom",
         "name": "Aerodoom",
         "releaseDate": "2000-10-01"
     },
-    {
-        "code": "WTH",
+    "17WTH": {
         "fileName": "AirForces",
         "name": "Air Forces",
         "releaseDate": "2007-12-12"
     },
-    {
-        "code": "JUD",
+    "22JUD": {
         "fileName": "AirRazers",
         "name": "Air Razers",
         "releaseDate": "2002-05-27"
     },
-    {
-        "code": "M19",
+    "27M19": {
         "fileName": "Ajani",
         "name": "Ajani",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "DDH",
+    "32DDH": {
         "fileName": "AjaniGoldmane",
         "name": "Ajani Goldmane",
         "releaseDate": "2011-09-02"
     },
-    {
-        "code": "M20",
+    "37M20": {
         "fileName": "AjaniInspiringLeader",
         "name": "Ajani, Inspiring Leader",
         "releaseDate": "2019-07-29"
     },
-    {
-        "code": "AER",
+    "42AER": {
         "fileName": "AjaniValiantProtector",
         "name": "Ajani, Valiant Protector",
         "releaseDate": "2017-01-20"
     },
-    {
-        "code": "W17",
+    "47W17": {
         "fileName": "AmonkhetWelcomeDeckBlack",
         "name": "Amonkhet Welcome Deck - Black",
         "releaseDate": "2017-04-15"
     },
-    {
-        "code": "W17",
+    "52W17": {
         "fileName": "AmonkhetWelcomeDeckBlue",
         "name": "Amonkhet Welcome Deck - Blue",
         "releaseDate": "2017-04-15"
     },
-    {
-        "code": "W17",
+    "57W17": {
         "fileName": "AmonkhetWelcomeDeckGreen",
         "name": "Amonkhet Welcome Deck - Green",
         "releaseDate": "2017-04-15"
     },
-    {
-        "code": "W17",
+    "62W17": {
         "fileName": "AmonkhetWelcomeDeckRed",
         "name": "Amonkhet Welcome Deck - Red",
         "releaseDate": "2017-04-15"
     },
-    {
-        "code": "W17",
+    "67W17": {
         "fileName": "AmonkhetWelcomeDeckWhite",
         "name": "Amonkhet Welcome Deck - White",
         "releaseDate": "2017-04-15"
     },
-    {
-        "code": "SOI",
+    "72SOI": {
         "fileName": "AngelicFury",
         "name": "Angelic Fury",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "AVR",
+    "77AVR": {
         "fileName": "AngelicMight",
         "name": "Angelic Might",
         "releaseDate": "2012-05-04"
     },
-    {
-        "code": "RIX",
+    "82RIX": {
         "fileName": "AngrathMinotaurPirate",
         "name": "Angrath, Minotaur Pirate",
         "releaseDate": "2018-01-19"
     },
-    {
-        "code": "THS",
+    "87THS": {
         "fileName": "AnthousaSArmy",
         "name": "Anthousa's Army",
         "releaseDate": "2013-09-27"
     },
-    {
-        "code": "GRN",
+    "92GRN": {
         "fileName": "ArcaneTempo",
         "name": "Arcane Tempo",
         "releaseDate": "2019-04-12"
     },
-    {
-        "code": "C17",
+    "97C17": {
         "fileName": "ArcaneWizardry",
         "name": "Arcane Wizardry",
         "releaseDate": "2017-08-25"
     },
-    {
-        "code": "10E",
+    "10210E": {
         "fileName": "ArcanisSGuile",
         "name": "Arcanis's Guile",
         "releaseDate": "2007-07-13"
     },
-    {
-        "code": "E01",
+    "107E01": {
         "fileName": "ArchenemyNicolBolas",
         "name": "Archenemy Nicol Bolas",
         "releaseDate": "2017-06-16"
     },
-    {
-        "code": "7ED",
+    "1127ED": {
         "fileName": "Armada",
         "name": "Armada",
         "releaseDate": "2001-04-11"
     },
-    {
-        "code": "ORI",
+    "117ORI": {
         "fileName": "Armed",
         "name": "Armed",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "ORI",
+    "122ORI": {
         "fileName": "ArmedAndDangerous",
         "name": "Armed and Dangerous",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "SHM",
+    "127SHM": {
         "fileName": "ArmyOfEntropy",
         "name": "Army of Entropy",
         "releaseDate": "2008-05-02"
     },
-    {
-        "code": "9ED",
+    "1329ED": {
         "fileName": "ArmyOfJustice",
         "name": "Army of Justice",
         "releaseDate": "2005-07-29"
     },
-    {
-        "code": "NPH",
+    "137NPH": {
         "fileName": "ArtfulDestruction",
         "name": "Artful Destruction",
         "releaseDate": "2011-05-13"
     },
-    {
-        "code": "UDS",
+    "142UDS": {
         "fileName": "Assassin",
         "name": "Assassin",
         "releaseDate": "1999-06-07"
     },
-    {
-        "code": "ARC",
+    "147ARC": {
         "fileName": "AssembleTheDoomsdayMachine",
         "name": "Assemble The Doomsday Machine",
         "releaseDate": "2010-06-18"
     },
-    {
-        "code": "ORI",
+    "152ORI": {
         "fileName": "AssembleVictory",
         "name": "Assemble Victory",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "SHM",
+    "157SHM": {
         "fileName": "AuraMastery",
         "name": "Aura Mastery",
         "releaseDate": "2008-05-02"
     },
-    {
-        "code": "CSP",
+    "162CSP": {
         "fileName": "AurochsStampede",
         "name": "Aurochs Stampede",
         "releaseDate": "2006-07-21"
     },
-    {
-        "code": "GK2",
+    "167GK2": {
         "fileName": "Azorius",
         "name": "Azorius",
         "releaseDate": "2019-02-15"
     },
-    {
-        "code": "RTR",
+    "172RTR": {
         "fileName": "AzoriusAdvance",
         "name": "Azorius Advance",
         "releaseDate": "2012-10-05"
     },
-    {
-        "code": "DIS",
+    "177DIS": {
         "fileName": "AzoriusAscendant",
         "name": "Azorius Ascendant",
         "releaseDate": "2006-05-05"
     },
-    {
-        "code": "DGM",
+    "182DGM": {
         "fileName": "AzoriusAuthority",
         "name": "Azorius Authority",
         "releaseDate": "2013-05-03"
     },
-    {
-        "code": "ONS",
+    "187ONS": {
         "fileName": "BaitSwitch",
         "name": "Bait & Switch",
         "releaseDate": "2002-10-07"
     },
-    {
-        "code": "MRD",
+    "192MRD": {
         "fileName": "BaitAndBludgeon",
         "name": "Bait and Bludgeon",
         "releaseDate": "2003-10-02"
     },
-    {
-        "code": "ME2",
+    "197ME2": {
         "fileName": "BandTogether",
         "name": "Band Together",
         "releaseDate": "2008-09-22"
     },
-    {
-        "code": "ALA",
+    "202ALA": {
         "fileName": "BantExalted",
         "name": "Bant Exalted",
         "releaseDate": "2008-10-03"
     },
-    {
-        "code": "CON",
+    "207CON": {
         "fileName": "BantOnTheMarch",
         "name": "Bant on the March",
         "releaseDate": "2009-02-06"
     },
-    {
-        "code": "PLS",
+    "212PLS": {
         "fileName": "Barrage",
         "name": "Barrage",
         "releaseDate": "2001-02-05"
     },
-    {
-        "code": "MOR",
+    "217MOR": {
         "fileName": "Battalion",
         "name": "Battalion",
         "releaseDate": "2008-02-01"
     },
-    {
-        "code": "EVE",
+    "222EVE": {
         "fileName": "BattleBlitz",
         "name": "Battle Blitz",
         "releaseDate": "2008-07-25"
     },
-    {
-        "code": "MBS",
+    "227MBS": {
         "fileName": "BattleCries",
         "name": "Battle Cries",
         "releaseDate": "2011-02-04"
     },
-    {
-        "code": "UDS",
+    "232UDS": {
         "fileName": "BattleSurge",
         "name": "Battle Surge",
         "releaseDate": "1999-06-07"
     },
-    {
-        "code": "M14",
+    "237M14": {
         "fileName": "BestialStrength",
         "name": "Bestial Strength",
         "releaseDate": "2013-07-19"
     },
-    {
-        "code": "CSP",
+    "242CSP": {
         "fileName": "BeyondTheGrave",
         "name": "Beyond The Grave",
         "releaseDate": "2006-07-21"
     },
-    {
-        "code": "GNT",
+    "247GNT": {
         "fileName": "Black",
         "name": "Black",
         "releaseDate": "2018-11-16"
     },
-    {
-        "code": "ATH",
+    "252ATH": {
         "fileName": "BlackRed",
         "name": "Black - Red",
         "releaseDate": "1998-11-01"
     },
-    {
-        "code": "W16",
+    "257W16": {
         "fileName": "BlackDeck",
         "name": "Black Deck",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "M20",
+    "262M20": {
         "fileName": "BlackDeck",
         "name": "Black Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "M11",
+    "267M11": {
         "fileName": "BladesOfVictory",
         "name": "Blades of Victory",
         "releaseDate": "2010-07-16"
     },
-    {
-        "code": "THS",
+    "272THS": {
         "fileName": "BlazingBeastsOfMyth",
         "name": "Blazing Beasts of Myth",
         "releaseDate": "2013-09-27"
     },
-    {
-        "code": "DDQ",
+    "277DDQ": {
         "fileName": "Blessed",
         "name": "Blessed",
         "releaseDate": "2016-02-26"
     },
-    {
-        "code": "S99",
+    "282S99": {
         "fileName": "BlindingFury",
         "name": "Blinding Fury",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "M12",
+    "287M12": {
         "fileName": "BloodAndFire",
         "name": "Blood and Fire",
         "releaseDate": "2011-07-15"
     },
-    {
-        "code": "INV",
+    "292INV": {
         "fileName": "Blowout",
         "name": "Blowout",
         "releaseDate": "2000-10-02"
     },
-    {
-        "code": "GNT",
+    "297GNT": {
         "fileName": "Blue",
         "name": "Blue",
         "releaseDate": "2018-11-16"
     },
-    {
-        "code": "W16",
+    "302W16": {
         "fileName": "BlueDeck",
         "name": "Blue Deck",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "M20",
+    "307M20": {
         "fileName": "BlueDeck",
         "name": "Blue Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "LRW",
+    "312LRW": {
         "fileName": "BoggartFeast",
         "name": "Boggart Feast",
         "releaseDate": "2007-10-12"
     },
-    {
-        "code": "TD0",
+    "317TD0": {
         "fileName": "Boltslinger",
         "name": "Boltslinger",
         "releaseDate": "2010-11-08"
     },
-    {
-        "code": "7ED",
+    "3227ED": {
         "fileName": "Bomber",
         "name": "Bomber",
         "releaseDate": "2001-04-11"
     },
-    {
-        "code": "GK1",
+    "327GK1": {
         "fileName": "Boros",
         "name": "Boros",
         "releaseDate": "2018-11-02"
     },
-    {
-        "code": "GTC",
+    "332GTC": {
         "fileName": "BorosBattalion",
         "name": "Boros Battalion",
         "releaseDate": "2013-02-01"
     },
-    {
-        "code": "AVR",
+    "337AVR": {
         "fileName": "BoundByStrength",
         "name": "Bound by Strength",
         "releaseDate": "2012-05-04"
     },
-    {
-        "code": "ORI",
+    "342ORI": {
         "fileName": "BraveTheBattle",
         "name": "Brave the Battle",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "E02",
+    "347E02": {
         "fileName": "BrazenCoalition",
         "name": "Brazen Coalition",
         "releaseDate": "2017-11-24"
     },
-    {
-        "code": "NEM",
+    "352NEM": {
         "fileName": "Breakdown",
         "name": "Breakdown",
         "releaseDate": "2000-02-14"
     },
-    {
-        "code": "M11",
+    "357M11": {
         "fileName": "BreathOfFire",
         "name": "Breath of Fire",
         "releaseDate": "2010-07-16"
     },
-    {
-        "code": "C16",
+    "362C16": {
         "fileName": "BreedLethality",
         "name": "Breed Lethality",
         "releaseDate": "2016-11-11"
     },
-    {
-        "code": "CM2",
+    "367CM2": {
         "fileName": "BreedLethality",
         "name": "Breed Lethality",
         "releaseDate": "2018-06-08"
     },
-    {
-        "code": "ARC",
+    "372ARC": {
         "fileName": "BringAboutTheUndeadApocalypse",
         "name": "Bring About The Undead Apocalypse",
         "releaseDate": "2010-06-18"
     },
-    {
-        "code": "WWK",
+    "377WWK": {
         "fileName": "BruteForce",
         "name": "Brute Force",
         "releaseDate": "2010-02-05"
     },
-    {
-        "code": "C14",
+    "382C14": {
         "fileName": "BuiltFromScratch",
         "name": "Built From Scratch",
         "releaseDate": "2014-11-07"
     },
-    {
-        "code": "CM2",
+    "387CM2": {
         "fileName": "BuiltFromScratch",
         "name": "Built From Scratch",
         "releaseDate": "2018-06-08"
     },
-    {
-        "code": "APC",
+    "392APC": {
         "fileName": "Burial",
         "name": "Burial",
         "releaseDate": "2001-06-04"
     },
-    {
-        "code": "MIR",
+    "397MIR": {
         "fileName": "BurningSky",
         "name": "Burning Sky",
         "releaseDate": "2006-12-05"
     },
-    {
-        "code": "BFZ",
+    "402BFZ": {
         "fileName": "CallOfBlood",
         "name": "Call of Blood",
         "releaseDate": "2015-10-02"
     },
-    {
-        "code": "STH",
+    "407STH": {
         "fileName": "CallOfTheKor",
         "name": "Call of the Kor",
         "releaseDate": "1998-03-02"
     },
-    {
-        "code": "C15",
+    "412C15": {
         "fileName": "CallTheSpirits",
         "name": "Call the Spirits",
         "releaseDate": "2015-11-13"
     },
-    {
-        "code": "ISD",
+    "417ISD": {
         "fileName": "CarnivalOfBlood",
         "name": "Carnival of Blood",
         "releaseDate": "2011-09-30"
     },
-    {
-        "code": "ONS",
+    "422ONS": {
         "fileName": "CelestialAssault",
         "name": "Celestial Assault",
         "releaseDate": "2002-10-07"
     },
-    {
-        "code": "DD2",
+    "427DD2": {
         "fileName": "Chandra",
         "name": "Chandra",
         "releaseDate": "2008-11-07"
     },
-    {
-        "code": "JVC",
+    "432JVC": {
         "fileName": "Chandra",
         "name": "Chandra",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "E01",
+    "437E01": {
         "fileName": "Chandra",
         "name": "Chandra",
         "releaseDate": "2017-06-16"
     },
-    {
-        "code": "DOM",
+    "442DOM": {
         "fileName": "ChandraBoldPyromancer",
         "name": "Chandra, Bold Pyromancer",
         "releaseDate": "2018-04-27"
     },
-    {
-        "code": "M20",
+    "447M20": {
         "fileName": "ChandraFlameSFury",
         "name": "Chandra, Flame's Fury",
         "releaseDate": "2019-07-29"
     },
-    {
-        "code": "KLD",
+    "452KLD": {
         "fileName": "ChandraPyrogenius",
         "name": "Chandra, Pyrogenius",
         "releaseDate": "2016-09-30"
     },
-    {
-        "code": "PC2",
+    "457PC2": {
         "fileName": "ChaosReigns",
         "name": "Chaos Reigns",
         "releaseDate": "2012-06-01"
     },
-    {
-        "code": "PCA",
+    "462PCA": {
         "fileName": "ChaosReigns",
         "name": "Chaos Reigns",
         "releaseDate": "2016-11-25"
     },
-    {
-        "code": "RAV",
+    "467RAV": {
         "fileName": "ChargeOfTheBoros",
         "name": "Charge of the Boros",
         "releaseDate": "2005-10-07"
     },
-    {
-        "code": "BRB",
+    "472BRB": {
         "fileName": "Chargoyf",
         "name": "Chargoyf",
         "releaseDate": "1999-11-12"
     },
-    {
-        "code": "10E",
+    "47710E": {
         "fileName": "ChoMannoSResolve",
         "name": "Cho-Manno's Resolve",
         "releaseDate": "2007-07-13"
     },
-    {
-        "code": "BRB",
+    "482BRB": {
         "fileName": "CinderHeart",
         "name": "Cinder Heart",
         "releaseDate": "1999-11-12"
     },
-    {
-        "code": "GPT",
+    "487GPT": {
         "fileName": "CodeOfTheOrzhov",
         "name": "Code of the Orzhov",
         "releaseDate": "2006-02-03"
     },
-    {
-        "code": "PLS",
+    "492PLS": {
         "fileName": "Comeback",
         "name": "Comeback",
         "releaseDate": "2001-02-05"
     },
-    {
-        "code": "OGW",
+    "497OGW": {
         "fileName": "ConcertedEffort",
         "name": "Concerted Effort",
         "releaseDate": "2016-01-22"
     },
-    {
-        "code": "KTK",
+    "502KTK": {
         "fileName": "ConqueringHordes",
         "name": "Conquering Hordes",
         "releaseDate": "2014-09-26"
     },
-    {
-        "code": "M19",
+    "507M19": {
         "fileName": "Core2019WelcomeDeckBlack",
         "name": "Core 2019 Welcome Deck - Black",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "M19",
+    "512M19": {
         "fileName": "Core2019WelcomeDeckBlue",
         "name": "Core 2019 Welcome Deck - Blue",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "M19",
+    "517M19": {
         "fileName": "Core2019WelcomeDeckGreen",
         "name": "Core 2019 Welcome Deck - Green",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "M19",
+    "522M19": {
         "fileName": "Core2019WelcomeDeckRed",
         "name": "Core 2019 Welcome Deck - Red",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "M19",
+    "527M19": {
         "fileName": "Core2019WelcomeDeckWhite",
         "name": "Core 2019 Welcome Deck - White",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "RIX",
+    "532RIX": {
         "fileName": "CounterSurge",
         "name": "Counter Surge",
         "releaseDate": "2018-04-06"
     },
-    {
-        "code": "CMD",
+    "537CMD": {
         "fileName": "Counterpunch",
         "name": "Counterpunch",
         "releaseDate": "2011-06-17"
     },
-    {
-        "code": "RTR",
+    "542RTR": {
         "fileName": "CreepAndConquer",
         "name": "Creep and Conquer",
         "releaseDate": "2012-10-26"
     },
-    {
-        "code": "SOK",
+    "547SOK": {
         "fileName": "CriticalMass",
         "name": "Critical Mass",
         "releaseDate": "2005-06-03"
     },
-    {
-        "code": "DTK",
+    "552DTK": {
         "fileName": "CruelPlots",
         "name": "Cruel Plots",
         "releaseDate": "2015-03-27"
     },
-    {
-        "code": "ULG",
+    "557ULG": {
         "fileName": "Crusher",
         "name": "Crusher",
         "releaseDate": "1999-02-15"
     },
-    {
-        "code": "DDN",
+    "562DDN": {
         "fileName": "Cunning",
         "name": "Cunning",
         "releaseDate": "2014-09-05"
     },
-    {
-        "code": "FRF",
+    "567FRF": {
         "fileName": "CunningPlan",
         "name": "Cunning Plan",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "DDQ",
+    "572DDQ": {
         "fileName": "Cursed",
         "name": "Cursed",
         "releaseDate": "2016-02-26"
     },
-    {
-        "code": "9ED",
+    "5779ED": {
         "fileName": "CustomCreatures",
         "name": "Custom Creatures",
         "releaseDate": "2005-07-29"
     },
-    {
-        "code": "ORI",
+    "582ORI": {
         "fileName": "Dangerous",
         "name": "Dangerous",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "EMN",
+    "587EMN": {
         "fileName": "DangerousKnowledge",
         "name": "Dangerous Knowledge",
         "releaseDate": "2016-07-22"
     },
-    {
-        "code": "BOK",
+    "592BOK": {
         "fileName": "DarkDevotion",
         "name": "Dark Devotion",
         "releaseDate": "2005-02-04"
     },
-    {
-        "code": "DKA",
+    "597DKA": {
         "fileName": "DarkSacrifice",
         "name": "Dark Sacrifice",
         "releaseDate": "2012-02-03"
     },
-    {
-        "code": "9ED",
+    "6029ED": {
         "fileName": "DeadAgain",
         "name": "Dead Again",
         "releaseDate": "2005-07-29"
     },
-    {
-        "code": "ARB",
+    "607ARB": {
         "fileName": "DeadAhead",
         "name": "Dead Ahead",
         "releaseDate": "2009-04-30"
     },
-    {
-        "code": "WTH",
+    "612WTH": {
         "fileName": "DeadAndAlive",
         "name": "Dead and Alive",
         "releaseDate": "2007-12-12"
     },
-    {
-        "code": "GRN",
+    "617GRN": {
         "fileName": "DeadlyDiscovery",
         "name": "Deadly Discovery",
         "releaseDate": "2019-04-12"
     },
-    {
-        "code": "S99",
+    "622S99": {
         "fileName": "DeadlyInstinct",
         "name": "Deadly Instinct",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "SOM",
+    "627SOM": {
         "fileName": "Deadspread",
         "name": "Deadspread",
         "releaseDate": "2010-10-01"
     },
-    {
-        "code": "EVE",
+    "632EVE": {
         "fileName": "DeathMarch",
         "name": "Death March",
         "releaseDate": "2008-07-25"
     },
-    {
-        "code": "M14",
+    "637M14": {
         "fileName": "DeathReaper",
         "name": "Death Reaper",
         "releaseDate": "2013-07-19"
     },
-    {
-        "code": "BNG",
+    "642BNG": {
         "fileName": "DeathSBeginning",
         "name": "Death's Beginning",
         "releaseDate": "2014-02-07"
     },
-    {
-        "code": "AVR",
+    "647AVR": {
         "fileName": "DeathSEncroach",
         "name": "Death's Encroach",
         "releaseDate": "2012-05-25"
     },
-    {
-        "code": "M10",
+    "652M10": {
         "fileName": "DeathSMinions",
         "name": "Death's Minions",
         "releaseDate": "2009-07-17"
     },
-    {
-        "code": "ME2",
+    "657ME2": {
         "fileName": "Deathbreed",
         "name": "Deathbreed",
         "releaseDate": "2008-09-22"
     },
-    {
-        "code": "TD0",
+    "662TD0": {
         "fileName": "DeathdancerXira",
         "name": "Deathdancer Xira",
         "releaseDate": "2009-08-26"
     },
-    {
-        "code": "ISD",
+    "667ISD": {
         "fileName": "Deathfed",
         "name": "Deathfed",
         "releaseDate": "2011-10-28"
     },
-    {
-        "code": "ISD",
+    "672ISD": {
         "fileName": "DeathlyDominion",
         "name": "Deathly Dominion",
         "releaseDate": "2011-09-30"
     },
-    {
-        "code": "7ED",
+    "6777ED": {
         "fileName": "Decay",
         "name": "Decay",
         "releaseDate": "2001-04-11"
     },
-    {
-        "code": "TMP",
+    "682TMP": {
         "fileName": "DeepFreeze",
         "name": "Deep Freeze",
         "releaseDate": "1997-10-14"
     },
-    {
-        "code": "MMQ",
+    "687MMQ": {
         "fileName": "DeepwoodMenace",
         "name": "Deepwood Menace",
         "releaseDate": "1999-10-04"
     },
-    {
-        "code": "DDC",
+    "692DDC": {
         "fileName": "Demonic",
         "name": "Demonic",
         "releaseDate": "2009-04-10"
     },
-    {
-        "code": "DVD",
+    "697DVD": {
         "fileName": "Demonic",
         "name": "Demonic",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "ORI",
+    "702ORI": {
         "fileName": "DemonicDeals",
         "name": "Demonic Deals",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "M13",
+    "707M13": {
         "fileName": "DepthsOfPower",
         "name": "Depths of Power",
         "releaseDate": "2012-07-13"
     },
-    {
-        "code": "OGW",
+    "712OGW": {
         "fileName": "DesperateStand",
         "name": "Desperate Stand",
         "releaseDate": "2016-01-22"
     },
-    {
-        "code": "ONS",
+    "717ONS": {
         "fileName": "Devastation",
         "name": "Devastation",
         "releaseDate": "2002-10-07"
     },
-    {
-        "code": "THS",
+    "722THS": {
         "fileName": "DevotionToDarkness",
         "name": "Devotion to Darkness",
         "releaseDate": "2013-09-27"
     },
-    {
-        "code": "CMD",
+    "727CMD": {
         "fileName": "DevourForPower",
         "name": "Devour for Power",
         "releaseDate": "2011-06-17"
     },
-    {
-        "code": "CM2",
+    "732CM2": {
         "fileName": "DevourForPower",
         "name": "Devour for Power",
         "releaseDate": "2018-06-08"
     },
-    {
-        "code": "NPH",
+    "737NPH": {
         "fileName": "DevouringSkies",
         "name": "Devouring Skies",
         "releaseDate": "2011-05-13"
     },
-    {
-        "code": "GK1",
+    "742GK1": {
         "fileName": "Dimir",
         "name": "Dimir",
         "releaseDate": "2018-11-02"
     },
-    {
-        "code": "GTC",
+    "747GTC": {
         "fileName": "DimirDementia",
         "name": "Dimir Dementia",
         "releaseDate": "2013-02-01"
     },
-    {
-        "code": "RAV",
+    "752RAV": {
         "fileName": "DimirIntrigues",
         "name": "Dimir Intrigues",
         "releaseDate": "2005-10-07"
     },
-    {
-        "code": "INV",
+    "757INV": {
         "fileName": "Dismissal",
         "name": "Dismissal",
         "releaseDate": "2000-10-02"
     },
-    {
-        "code": "MMQ",
+    "762MMQ": {
         "fileName": "Disruptor",
         "name": "Disruptor",
         "releaseDate": "1999-10-04"
     },
-    {
-        "code": "PCY",
+    "767PCY": {
         "fileName": "Distress",
         "name": "Distress",
         "releaseDate": "2000-06-05"
     },
-    {
-        "code": "DDC",
+    "772DDC": {
         "fileName": "Divine",
         "name": "Divine",
         "releaseDate": "2009-04-10"
     },
-    {
-        "code": "DVD",
+    "777DVD": {
         "fileName": "Divine",
         "name": "Divine",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "PLS",
+    "782PLS": {
         "fileName": "Domain",
         "name": "Domain",
         "releaseDate": "2001-02-05"
     },
-    {
-        "code": "EXO",
+    "787EXO": {
         "fileName": "DominatorAdvancedDeck",
         "name": "Dominator - Advanced Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "EXO",
+    "792EXO": {
         "fileName": "DominatorBasicDeck",
         "name": "Dominator - Basic Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "RNA",
+    "797RNA": {
         "fileName": "DomriCitySmasher",
         "name": "Domri, City Smasher",
         "releaseDate": "2019-01-25"
     },
-    {
-        "code": "MBS",
+    "802MBS": {
         "fileName": "DoomInevitable",
         "name": "Doom Inevitable",
         "releaseDate": "2011-02-04"
     },
-    {
-        "code": "RNA",
+    "807RNA": {
         "fileName": "DovinArchitectOfLaw",
         "name": "Dovin, Architect of Law",
         "releaseDate": "2019-01-25"
     },
-    {
-        "code": "C17",
+    "812C17": {
         "fileName": "DraconicDomination",
         "name": "Draconic Domination",
         "releaseDate": "2017-08-25"
     },
-    {
-        "code": "DDG",
+    "817DDG": {
         "fileName": "Dragons",
         "name": "Dragons",
         "releaseDate": "2011-04-01"
     },
-    {
-        "code": "DPA",
+    "822DPA": {
         "fileName": "EarsOfTheElvesTheNissaRevaneDeck",
         "name": "Ears of the Elves - The Nissa Revane Deck",
         "releaseDate": "2010-06-04"
     },
-    {
-        "code": "DDP",
+    "827DDP": {
         "fileName": "Eldrazi",
         "name": "Eldrazi",
         "releaseDate": "2015-08-28"
     },
-    {
-        "code": "ROE",
+    "832ROE": {
         "fileName": "EldraziArisen",
         "name": "Eldrazi Arisen",
         "releaseDate": "2010-04-23"
     },
-    {
-        "code": "BFZ",
+    "837BFZ": {
         "fileName": "EldraziAssault",
         "name": "Eldrazi Assault",
         "releaseDate": "2015-10-02"
     },
-    {
-        "code": "ISD",
+    "842ISD": {
         "fileName": "EldritchOnslaught",
         "name": "Eldritch Onslaught",
         "releaseDate": "2011-09-30"
     },
-    {
-        "code": "HOP",
+    "847HOP": {
         "fileName": "ElementalThunder",
         "name": "Elemental Thunder",
         "releaseDate": "2009-09-04"
     },
-    {
-        "code": "LRW",
+    "852LRW": {
         "fileName": "ElementalsPath",
         "name": "Elementals' Path",
         "releaseDate": "2007-10-12"
     },
-    {
-        "code": "DDF",
+    "857DDF": {
         "fileName": "Elspeth",
         "name": "Elspeth",
         "releaseDate": "2010-09-03"
     },
-    {
-        "code": "DDO",
+    "862DDO": {
         "fileName": "Elspeth",
         "name": "Elspeth",
         "releaseDate": "2015-02-27"
     },
-    {
-        "code": "DD1",
+    "867DD1": {
         "fileName": "Elves",
         "name": "Elves",
         "releaseDate": "2007-11-16"
     },
-    {
-        "code": "EVG",
+    "872EVG": {
         "fileName": "Elves",
         "name": "Elves",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "LRW",
+    "877LRW": {
         "fileName": "ElvishPredation",
         "name": "Elvish Predation",
         "releaseDate": "2007-10-12"
     },
-    {
-        "code": "LGN",
+    "882LGN": {
         "fileName": "ElvishRage",
         "name": "Elvish Rage",
         "releaseDate": "2003-02-03"
     },
-    {
-        "code": "UDS",
+    "887UDS": {
         "fileName": "Enchanter",
         "name": "Enchanter",
         "releaseDate": "1999-06-07"
     },
-    {
-        "code": "TD0",
+    "892TD0": {
         "fileName": "EnchantressRubinia",
         "name": "Enchantress Rubinia",
         "releaseDate": "2009-08-26"
     },
-    {
-        "code": "PLC",
+    "897PLC": {
         "fileName": "EndlessMarch",
         "name": "Endless March",
         "releaseDate": "2007-02-02"
     },
-    {
-        "code": "DTK",
+    "902DTK": {
         "fileName": "EnlightenedMastery",
         "name": "Enlightened Mastery",
         "releaseDate": "2015-03-27"
     },
-    {
-        "code": "M12",
+    "907M12": {
         "fileName": "EntanglingWebs",
         "name": "Entangling Webs",
         "releaseDate": "2011-07-15"
     },
-    {
-        "code": "C16",
+    "912C16": {
         "fileName": "EntropicUprising",
         "name": "Entropic Uprising",
         "releaseDate": "2016-11-11"
     },
-    {
-        "code": "NEM",
+    "917NEM": {
         "fileName": "Eruption",
         "name": "Eruption",
         "releaseDate": "2000-02-14"
     },
-    {
-        "code": "CON",
+    "922CON": {
         "fileName": "EsperAirAssault",
         "name": "Esper Air Assault",
         "releaseDate": "2009-02-06"
     },
-    {
-        "code": "ALA",
+    "927ALA": {
         "fileName": "EsperArtifice",
         "name": "Esper Artifice",
         "releaseDate": "2008-10-03"
     },
-    {
-        "code": "C13",
+    "932C13": {
         "fileName": "EternalBargain",
         "name": "Eternal Bargain",
         "releaseDate": "2013-11-01"
     },
-    {
-        "code": "ARB",
+    "937ARB": {
         "fileName": "EternalSiege",
         "name": "Eternal Siege",
         "releaseDate": "2009-04-30"
     },
-    {
-        "code": "C13",
+    "942C13": {
         "fileName": "EvasiveManeuvers",
         "name": "Evasive Maneuvers",
         "releaseDate": "2013-11-01"
     },
-    {
-        "code": "CMA",
+    "947CMA": {
         "fileName": "EvasiveManeuvers",
         "name": "Evasive Maneuvers",
         "releaseDate": "2017-06-09"
     },
-    {
-        "code": "10E",
+    "95210E": {
         "fileName": "EvincarSTyranny",
         "name": "Evincar's Tyranny",
         "releaseDate": "2007-07-13"
     },
-    {
-        "code": "TD0",
+    "957TD0": {
         "fileName": "Exiler",
         "name": "Exiler",
         "releaseDate": "2010-11-08"
     },
-    {
-        "code": "8ED",
+    "9628ED": {
         "fileName": "Expulsion",
         "name": "Expulsion",
         "releaseDate": "2003-07-28"
     },
-    {
-        "code": "C18",
+    "967C18": {
         "fileName": "ExquisiteInvention",
         "name": "Exquisite Invention",
         "releaseDate": "2018-08-10"
     },
-    {
-        "code": "DPA",
+    "972DPA": {
         "fileName": "EyesOfShadowTheLilianaVessDeck",
         "name": "Eyes of Shadow - The Liliana Vess Deck",
         "releaseDate": "2010-06-04"
     },
-    {
-        "code": "C19",
+    "977C19": {
         "fileName": "FacelessMenace",
         "name": "Faceless Menace",
         "releaseDate": "2019-08-23"
     },
-    {
-        "code": "ELD",
+    "982ELD": {
         "fileName": "FaerieSchemes",
         "name": "Faerie Schemes",
         "releaseDate": "2019-10-04"
     },
-    {
-        "code": "WWK",
+    "987WWK": {
         "fileName": "FangsOfTheBloodchief",
         "name": "Fangs of the Bloodchief",
         "releaseDate": "2010-02-05"
     },
-    {
-        "code": "M15",
+    "992M15": {
         "fileName": "Fate",
         "name": "Fate",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "FUT",
+    "997FUT": {
         "fileName": "FateBlaster",
         "name": "Fate Blaster",
         "releaseDate": "2007-05-04"
     },
-    {
-        "code": "M15",
+    "1002M15": {
         "fileName": "FateAndFury",
         "name": "Fate and Fury",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "JOU",
+    "1007JOU": {
         "fileName": "FatesForeseen",
         "name": "Fates Foreseen",
         "releaseDate": "2014-05-02"
     },
-    {
-        "code": "THS",
+    "1012THS": {
         "fileName": "FavorsFromNyx",
         "name": "Favors From Nyx",
         "releaseDate": "2013-09-27"
     },
-    {
-        "code": "NPH",
+    "1017NPH": {
         "fileName": "FeastOfFlesh",
         "name": "Feast of Flesh",
         "releaseDate": "2011-05-13"
     },
-    {
-        "code": "C17",
+    "1022C17": {
         "fileName": "FelineFerocity",
         "name": "Feline Ferocity",
         "releaseDate": "2017-08-25"
     },
-    {
-        "code": "UDS",
+    "1027UDS": {
         "fileName": "FiendishNature",
         "name": "Fiendish Nature",
         "releaseDate": "1999-06-07"
     },
-    {
-        "code": "AVR",
+    "1032AVR": {
         "fileName": "FieryDawn",
         "name": "Fiery Dawn",
         "releaseDate": "2012-05-04"
     },
-    {
-        "code": "WTH",
+    "1037WTH": {
         "fileName": "FieryFury",
         "name": "Fiery Fury",
         "releaseDate": "2007-12-12"
     },
-    {
-        "code": "DKM",
+    "1042DKM": {
         "fileName": "Finkel",
         "name": "Finkel",
         "releaseDate": "2001-12-01"
     },
-    {
-        "code": "M14",
+    "1047M14": {
         "fileName": "FireSurge",
         "name": "Fire Surge",
         "releaseDate": "2013-07-19"
     },
-    {
-        "code": "PD2",
+    "1052PD2": {
         "fileName": "FireAndLightning",
         "name": "Fire and Lightning",
         "releaseDate": "2010-11-19"
     },
-    {
-        "code": "M10",
+    "1057M10": {
         "fileName": "Firebomber",
         "name": "Firebomber",
         "releaseDate": "2009-07-17"
     },
-    {
-        "code": "M15",
+    "1062M15": {
         "fileName": "FlamesOfTheDragon",
         "name": "Flames Of The Dragon",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "WWK",
+    "1067WWK": {
         "fileName": "Flyover",
         "name": "Flyover",
         "releaseDate": "2010-02-05"
     },
-    {
-        "code": "C14",
+    "1072C14": {
         "fileName": "ForgedInStone",
         "name": "Forged In Stone",
         "releaseDate": "2014-11-07"
     },
-    {
-        "code": "BNG",
+    "1077BNG": {
         "fileName": "ForgedInBattle",
         "name": "Forged in Battle",
         "releaseDate": "2014-02-07"
     },
-    {
-        "code": "TSP",
+    "1082TSP": {
         "fileName": "FunWithFungus",
         "name": "Fun With Fungus",
         "releaseDate": "2006-10-06"
     },
-    {
-        "code": "DTK",
+    "1087DTK": {
         "fileName": "FuriousForces",
         "name": "Furious Forces",
         "releaseDate": "2015-03-27"
     },
-    {
-        "code": "M15",
+    "1092M15": {
         "fileName": "Fury",
         "name": "Fury",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "FUT",
+    "1097FUT": {
         "fileName": "FutureShock",
         "name": "Future Shock",
         "releaseDate": "2007-05-04"
     },
-    {
-        "code": "DKM",
+    "1102DKM": {
         "fileName": "Garfield",
         "name": "Garfield",
         "releaseDate": "2001-12-01"
     },
-    {
-        "code": "DDD",
+    "1107DDD": {
         "fileName": "Garruk",
         "name": "Garruk",
         "releaseDate": "2009-10-30"
     },
-    {
-        "code": "GVL",
+    "1112GVL": {
         "fileName": "Garruk",
         "name": "Garruk",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "WTH",
+    "1117WTH": {
         "fileName": "Gatecrasher",
         "name": "Gatecrasher",
         "releaseDate": "2007-12-12"
     },
-    {
-        "code": "SOI",
+    "1122SOI": {
         "fileName": "GhostlyTide",
         "name": "Ghostly Tide",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "E01",
+    "1127E01": {
         "fileName": "Gideon",
         "name": "Gideon",
         "releaseDate": "2017-06-16"
     },
-    {
-        "code": "AKH",
+    "1132AKH": {
         "fileName": "GideonMartialParagon",
         "name": "Gideon, Martial Paragon",
         "releaseDate": "2017-04-28"
     },
-    {
-        "code": "WAR",
+    "1137WAR": {
         "fileName": "GideonTheOathsworn",
         "name": "Gideon, the Oathsworn",
         "releaseDate": "2019-05-03"
     },
-    {
-        "code": "BNG",
+    "1142BNG": {
         "fileName": "GiftsOfTheGods",
         "name": "Gifts of the Gods",
         "releaseDate": "2014-02-07"
     },
-    {
-        "code": "DKA",
+    "1147DKA": {
         "fileName": "GleefulFlames",
         "name": "Gleeful Flames",
         "releaseDate": "2012-02-24"
     },
-    {
-        "code": "S99",
+    "1152S99": {
         "fileName": "GoblinAssault",
         "name": "Goblin Assault",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "P02",
+    "1157P02": {
         "fileName": "GoblinFire",
         "name": "Goblin Fire",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "SCG",
+    "1162SCG": {
         "fileName": "GoblinMob",
         "name": "Goblin Mob",
         "releaseDate": "2003-05-26"
     },
-    {
-        "code": "DD1",
+    "1167DD1": {
         "fileName": "Goblins",
         "name": "Goblins",
         "releaseDate": "2007-11-16"
     },
-    {
-        "code": "EVG",
+    "1172EVG": {
         "fileName": "Goblins",
         "name": "Goblins",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "DDT",
+    "1177DDT": {
         "fileName": "Goblins",
         "name": "Goblins",
         "releaseDate": "2017-11-10"
     },
-    {
-        "code": "MOR",
+    "1182MOR": {
         "fileName": "GoingRogue",
         "name": "Going Rogue",
         "releaseDate": "2008-02-01"
     },
-    {
-        "code": "DDJ",
+    "1187DDJ": {
         "fileName": "Golgari",
         "name": "Golgari",
         "releaseDate": "2012-09-07"
     },
-    {
-        "code": "GK1",
+    "1192GK1": {
         "fileName": "Golgari",
         "name": "Golgari",
         "releaseDate": "2018-11-02"
     },
-    {
-        "code": "RAV",
+    "1197RAV": {
         "fileName": "GolgariDeathcreep",
         "name": "Golgari Deathcreep",
         "releaseDate": "2005-10-07"
     },
-    {
-        "code": "RTR",
+    "1202RTR": {
         "fileName": "GolgariGrowth",
         "name": "Golgari Growth",
         "releaseDate": "2012-10-05"
     },
-    {
-        "code": "M12",
+    "1207M12": {
         "fileName": "GrabForPower",
         "name": "Grab for Power",
         "releaseDate": "2011-07-15"
     },
-    {
-        "code": "FRF",
+    "1212FRF": {
         "fileName": "GraveAdvantage",
         "name": "Grave Advantage",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "TOR",
+    "1217TOR": {
         "fileName": "GraveDanger",
         "name": "Grave Danger",
         "releaseDate": "2002-02-08"
     },
-    {
-        "code": "DKA",
+    "1222DKA": {
         "fileName": "GravePower",
         "name": "Grave Power",
         "releaseDate": "2012-02-03"
     },
-    {
-        "code": "PD3",
+    "1227PD3": {
         "fileName": "Graveborn",
         "name": "Graveborn",
         "releaseDate": "2011-11-18"
     },
-    {
-        "code": "GNT",
+    "1232GNT": {
         "fileName": "Green",
         "name": "Green",
         "releaseDate": "2018-11-16"
     },
-    {
-        "code": "ATH",
+    "1237ATH": {
         "fileName": "GreenWhite",
         "name": "Green - White",
         "releaseDate": "1998-11-01"
     },
-    {
-        "code": "W16",
+    "1242W16": {
         "fileName": "GreenDeck",
         "name": "Green Deck",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "M20",
+    "1247M20": {
         "fileName": "GreenDeck",
         "name": "Green Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "CON",
+    "1252CON": {
         "fileName": "GrixisShamblingArmy",
         "name": "Grixis Shambling Army",
         "releaseDate": "2009-02-06"
     },
-    {
-        "code": "ALA",
+    "1257ALA": {
         "fileName": "GrixisUndead",
         "name": "Grixis Undead",
         "releaseDate": "2008-10-03"
     },
-    {
-        "code": "BTD",
+    "1262BTD": {
         "fileName": "GroundPounder",
         "name": "Ground Pounder",
         "releaseDate": "2000-10-01"
     },
-    {
-        "code": "EXO",
+    "1267EXO": {
         "fileName": "GroundbreakerAdvancedDeck",
         "name": "Groundbreaker - Advanced Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "EXO",
+    "1272EXO": {
         "fileName": "GroundbreakerBasicDeck",
         "name": "Groundbreaker - Basic Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "GK2",
+    "1277GK2": {
         "fileName": "Gruul",
         "name": "Gruul",
         "releaseDate": "2019-02-15"
     },
-    {
-        "code": "GTC",
+    "1282GTC": {
         "fileName": "GruulGoliaths",
         "name": "Gruul Goliaths",
         "releaseDate": "2013-02-01"
     },
-    {
-        "code": "DGM",
+    "1287DGM": {
         "fileName": "GruulSiege",
         "name": "Gruul Siege",
         "releaseDate": "2013-05-03"
     },
-    {
-        "code": "GPT",
+    "1292GPT": {
         "fileName": "GruulWilding",
         "name": "Gruul Wilding",
         "releaseDate": "2006-02-03"
     },
-    {
-        "code": "C14",
+    "1297C14": {
         "fileName": "GuidedByNature",
         "name": "Guided By Nature",
         "releaseDate": "2014-11-07"
     },
-    {
-        "code": "CMA",
+    "1302CMA": {
         "fileName": "GuidedByNature",
         "name": "Guided by Nature",
         "releaseDate": "2017-06-09"
     },
-    {
-        "code": "DPA",
+    "1307DPA": {
         "fileName": "HandsOfFlameTheChandraNalaarDeck",
         "name": "Hands of Flame - The Chandra Nalaar Deck",
         "releaseDate": "2010-06-04"
     },
-    {
-        "code": "ME2",
+    "1312ME2": {
         "fileName": "HazeOfSpores",
         "name": "Haze of Spores",
         "releaseDate": "2008-09-22"
     },
-    {
-        "code": "RIX",
+    "1317RIX": {
         "fileName": "HazoretAggro",
         "name": "Hazoret Aggro",
         "releaseDate": "2018-04-06"
     },
-    {
-        "code": "CMD",
+    "1322CMD": {
         "fileName": "HeavenlyInferno",
         "name": "Heavenly Inferno",
         "releaseDate": "2011-06-17"
     },
-    {
-        "code": "CMA",
+    "1327CMA": {
         "fileName": "HeavenlyInferno",
         "name": "Heavenly Inferno",
         "releaseDate": "2017-06-09"
     },
-    {
-        "code": "INV",
+    "1332INV": {
         "fileName": "HeavyDuty",
         "name": "Heavy Duty",
         "releaseDate": "2000-10-02"
     },
-    {
-        "code": "8ED",
+    "13378ED": {
         "fileName": "HeavyHitters",
         "name": "Heavy Hitters",
         "releaseDate": "2003-07-28"
     },
-    {
-        "code": "DDL",
+    "1342DDL": {
         "fileName": "Heroes",
         "name": "Heroes",
         "releaseDate": "2013-09-06"
     },
-    {
-        "code": "M15",
+    "1347M15": {
         "fileName": "HitTheGroundRunning",
         "name": "Hit The Ground Running",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "ISD",
+    "1352ISD": {
         "fileName": "HoldTheLine",
         "name": "Hold The Line",
         "releaseDate": "2011-10-28"
     },
-    {
-        "code": "TSP",
+    "1357TSP": {
         "fileName": "HopeSCrusaders",
         "name": "Hope's Crusaders",
         "releaseDate": "2006-10-06"
     },
-    {
-        "code": "SOI",
+    "1362SOI": {
         "fileName": "HorrificVisions",
         "name": "Horrific Visions",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "XLN",
+    "1367XLN": {
         "fileName": "HuatliDinosaurKnight",
         "name": "Huatli, Dinosaur Knight",
         "releaseDate": "2017-09-29"
     },
-    {
-        "code": "AVR",
+    "1372AVR": {
         "fileName": "HumanitySVengeance",
         "name": "Humanity's Vengeance",
         "releaseDate": "2012-05-25"
     },
-    {
-        "code": "ORI",
+    "1377ORI": {
         "fileName": "HuntingPack",
         "name": "Hunting Pack",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "M12",
+    "1382M12": {
         "fileName": "IllusionaryMight",
         "name": "Illusionary Might",
         "releaseDate": "2011-08-12"
     },
-    {
-        "code": "S99",
+    "1387S99": {
         "fileName": "Impaler",
         "name": "Impaler",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "MBS",
+    "1392MBS": {
         "fileName": "InfectDefile",
         "name": "Infect & Defile",
         "releaseDate": "2011-02-25"
     },
-    {
-        "code": "M15",
+    "1397M15": {
         "fileName": "InfernalIntervention",
         "name": "Infernal Intervention",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "7ED",
+    "14027ED": {
         "fileName": "Infestation",
         "name": "Infestation",
         "releaseDate": "2001-04-11"
     },
-    {
-        "code": "DDU",
+    "1407DDU": {
         "fileName": "IngeniousMachinists",
         "name": "Ingenious Machinists",
         "releaseDate": "2018-04-06"
     },
-    {
-        "code": "TOR",
+    "1412TOR": {
         "fileName": "Insanity",
         "name": "Insanity",
         "releaseDate": "2002-02-08"
     },
-    {
-        "code": "BNG",
+    "1417BNG": {
         "fileName": "InsatiableHunger",
         "name": "Insatiable Hunger",
         "releaseDate": "2014-02-07"
     },
-    {
-        "code": "BNG",
+    "1422BNG": {
         "fileName": "InspirationStruck",
         "name": "Inspiration-Struck",
         "releaseDate": "2014-02-07"
     },
-    {
-        "code": "THS",
+    "1427THS": {
         "fileName": "InspiringHeroics",
         "name": "Inspiring Heroics",
         "releaseDate": "2013-10-18"
     },
-    {
-        "code": "MBS",
+    "1432MBS": {
         "fileName": "IntoTheBreach",
         "name": "Into the Breach",
         "releaseDate": "2011-02-25"
     },
-    {
-        "code": "JUD",
+    "1437JUD": {
         "fileName": "Inundation",
         "name": "Inundation",
         "releaseDate": "2002-05-27"
     },
-    {
-        "code": "ROE",
+    "1442ROE": {
         "fileName": "InvadingSpawn",
         "name": "Invading Spawn",
         "releaseDate": "2010-04-23"
     },
-    {
-        "code": "C16",
+    "1447C16": {
         "fileName": "InventSuperiority",
         "name": "Invent Superiority",
         "releaseDate": "2016-11-11"
     },
-    {
-        "code": "ONS",
+    "1452ONS": {
         "fileName": "IvoryDoom",
         "name": "Ivory Doom",
         "releaseDate": "2002-10-07"
     },
-    {
-        "code": "PLC",
+    "1457PLC": {
         "fileName": "IxidorSLegacy",
         "name": "Ixidor's Legacy",
         "releaseDate": "2007-02-02"
     },
-    {
-        "code": "DDJ",
+    "1462DDJ": {
         "fileName": "Izzet",
         "name": "Izzet",
         "releaseDate": "2012-09-07"
     },
-    {
-        "code": "GK1",
+    "1467GK1": {
         "fileName": "Izzet",
         "name": "Izzet",
         "releaseDate": "2018-11-02"
     },
-    {
-        "code": "GPT",
+    "1472GPT": {
         "fileName": "IzzetGizmometry",
         "name": "Izzet Gizmometry",
         "releaseDate": "2006-02-03"
     },
-    {
-        "code": "RTR",
+    "1477RTR": {
         "fileName": "IzzetIngenuity",
         "name": "Izzet Ingenuity",
         "releaseDate": "2012-10-05"
     },
-    {
-        "code": "DD2",
+    "1482DD2": {
         "fileName": "Jace",
         "name": "Jace",
         "releaseDate": "2008-11-07"
     },
-    {
-        "code": "DDM",
+    "1487DDM": {
         "fileName": "Jace",
         "name": "Jace",
         "releaseDate": "2014-03-14"
     },
-    {
-        "code": "JVC",
+    "1492JVC": {
         "fileName": "Jace",
         "name": "Jace",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "WAR",
+    "1497WAR": {
         "fileName": "JaceArcaneStrategist",
         "name": "Jace, Arcane Strategist",
         "releaseDate": "2019-05-03"
     },
-    {
-        "code": "XLN",
+    "1502XLN": {
         "fileName": "JaceIngeniousMindMage",
         "name": "Jace, Ingenious Mind Mage",
         "releaseDate": "2017-09-29"
     },
-    {
-        "code": "KTK",
+    "1507KTK": {
         "fileName": "JeskaiMonks",
         "name": "Jeskai Monks",
         "releaseDate": "2014-09-26"
     },
-    {
-        "code": "GS1",
+    "1512GS1": {
         "fileName": "JiangYanggu",
         "name": "Jiang Yanggu",
         "releaseDate": "2018-06-22"
     },
-    {
-        "code": "CON",
+    "1517CON": {
         "fileName": "JundAppetiteForWar",
         "name": "Jund Appetite for War",
         "releaseDate": "2009-02-06"
     },
-    {
-        "code": "MIR",
+    "1522MIR": {
         "fileName": "JungleJam",
         "name": "Jungle Jam",
         "releaseDate": "2006-12-05"
     },
-    {
-        "code": "10E",
+    "152710E": {
         "fileName": "KamahlSTemper",
         "name": "Kamahl's Temper",
         "releaseDate": "2007-07-13"
     },
-    {
-        "code": "CHK",
+    "1532CHK": {
         "fileName": "KamiReborn",
         "name": "Kami Reborn",
         "releaseDate": "2004-10-01"
     },
-    {
-        "code": "RQS",
+    "1537RQS": {
         "fileName": "KazzSFirstDeck",
         "name": "Kazz's First Deck",
         "releaseDate": "1996-06-10"
     },
-    {
-        "code": "ITP",
+    "1542ITP": {
         "fileName": "KazzSFirstDeck",
         "name": "Kazz's First Deck",
         "releaseDate": "1996-12-31"
     },
-    {
-        "code": "RQS",
+    "1547RQS": {
         "fileName": "KazzSSecondDeck",
         "name": "Kazz's Second Deck",
         "releaseDate": "1996-06-10"
     },
-    {
-        "code": "ITP",
+    "1552ITP": {
         "fileName": "KazzSSecondDeck",
         "name": "Kazz's Second Deck",
         "releaseDate": "1996-12-31"
     },
-    {
-        "code": "DDO",
+    "1557DDO": {
         "fileName": "Kiora",
         "name": "Kiora",
         "releaseDate": "2015-02-27"
     },
-    {
-        "code": "LRW",
+    "1562LRW": {
         "fileName": "KithkinMilitia",
         "name": "Kithkin Militia",
         "releaseDate": "2007-10-12"
     },
-    {
-        "code": "CSP",
+    "1567CSP": {
         "fileName": "KjeldoranCunning",
         "name": "Kjeldoran Cunning",
         "releaseDate": "2006-07-21"
     },
-    {
-        "code": "DDG",
+    "1572DDG": {
         "fileName": "Knights",
         "name": "Knights",
         "releaseDate": "2011-04-01"
     },
-    {
-        "code": "ELD",
+    "1577ELD": {
         "fileName": "KnightsCharge",
         "name": "Knights' Charge",
         "releaseDate": "2019-10-04"
     },
-    {
-        "code": "ZEN",
+    "1582ZEN": {
         "fileName": "KorArmory",
         "name": "Kor Armory",
         "releaseDate": "2009-10-02"
     },
-    {
-        "code": "DDI",
+    "1587DDI": {
         "fileName": "Koth",
         "name": "Koth",
         "releaseDate": "2012-03-30"
     },
-    {
-        "code": "DTK",
+    "1592DTK": {
         "fileName": "LandslideCharge",
         "name": "Landslide Charge",
         "releaseDate": "2015-03-27"
     },
-    {
-        "code": "ARB",
+    "1597ARB": {
         "fileName": "LegionAloft",
         "name": "Legion Aloft",
         "releaseDate": "2009-04-30"
     },
-    {
-        "code": "E02",
+    "1602E02": {
         "fileName": "LegionOfDusk",
         "name": "Legion of Dusk",
         "releaseDate": "2017-11-24"
     },
-    {
-        "code": "VIS",
+    "1607VIS": {
         "fileName": "LegionOfGlory",
         "name": "Legion of Glory",
         "releaseDate": "2006-04-10"
     },
-    {
-        "code": "ROE",
+    "1612ROE": {
         "fileName": "LevelersScorn",
         "name": "Levelers Scorn",
         "releaseDate": "2010-04-23"
     },
-    {
-        "code": "ROE",
+    "1617ROE": {
         "fileName": "LevelersGlory",
         "name": "Levelers' Glory",
         "releaseDate": "2010-04-23"
     },
-    {
-        "code": "8ED",
+    "16228ED": {
         "fileName": "LifeBoost",
         "name": "Life Boost",
         "releaseDate": "2003-07-28"
     },
-    {
-        "code": "EVE",
+    "1627EVE": {
         "fileName": "LifeDrain",
         "name": "Life Drain",
         "releaseDate": "2008-07-25"
     },
-    {
-        "code": "NPH",
+    "1632NPH": {
         "fileName": "LifeForDeath",
         "name": "Life for Death",
         "releaseDate": "2011-05-13"
     },
-    {
-        "code": "ODY",
+    "1637ODY": {
         "fileName": "Liftoff",
         "name": "Liftoff",
         "releaseDate": "2001-10-01"
     },
-    {
-        "code": "M14",
+    "1642M14": {
         "fileName": "Lightforce",
         "name": "Lightforce",
         "releaseDate": "2013-07-19"
     },
-    {
-        "code": "GRN",
+    "1647GRN": {
         "fileName": "LightningAggro",
         "name": "Lightning Aggro",
         "releaseDate": "2019-04-12"
     },
-    {
-        "code": "DDD",
+    "1652DDD": {
         "fileName": "Liliana",
         "name": "Liliana",
         "releaseDate": "2009-10-30"
     },
-    {
-        "code": "GVL",
+    "1657GVL": {
         "fileName": "Liliana",
         "name": "Liliana",
         "releaseDate": "2014-12-05"
     },
-    {
-        "code": "M19",
+    "1662M19": {
         "fileName": "Liliana",
         "name": "Liliana",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "AKH",
+    "1667AKH": {
         "fileName": "LilianaDeathWielder",
         "name": "Liliana, Death Wielder",
         "releaseDate": "2017-04-28"
     },
-    {
-        "code": "MRD",
+    "1672MRD": {
         "fileName": "LittleBashers",
         "name": "Little Bashers",
         "releaseDate": "2003-10-02"
     },
-    {
-        "code": "9ED",
+    "16779ED": {
         "fileName": "LoftyHeights",
         "name": "Lofty Heights",
         "releaseDate": "2005-07-29"
     },
-    {
-        "code": "THS",
+    "1682THS": {
         "fileName": "ManipulativeMonstrosities",
         "name": "Manipulative Monstrosities",
         "releaseDate": "2013-09-27"
     },
-    {
-        "code": "MD1",
+    "1687MD1": {
         "fileName": "MarchOfTheMultitudes",
         "name": "March of the Multitudes",
         "releaseDate": "2014-05-30"
     },
-    {
-        "code": "KTK",
+    "1692KTK": {
         "fileName": "MarduRaiders",
         "name": "Mardu Raiders",
         "releaseDate": "2014-09-26"
     },
-    {
-        "code": "P02",
+    "1697P02": {
         "fileName": "MartialLaw",
         "name": "Martial Law",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "DTK",
+    "1702DTK": {
         "fileName": "MassedRanks",
         "name": "Massed Ranks",
         "releaseDate": "2015-03-27"
     },
-    {
-        "code": "DST",
+    "1707DST": {
         "fileName": "MasterBlaster",
         "name": "Master Blaster",
         "releaseDate": "2004-02-06"
     },
-    {
-        "code": "SCG",
+    "1712SCG": {
         "fileName": "MaxAttax",
         "name": "Max Attax",
         "releaseDate": "2003-05-26"
     },
-    {
-        "code": "NEM",
+    "1717NEM": {
         "fileName": "Mercenaries",
         "name": "Mercenaries",
         "releaseDate": "2000-02-14"
     },
-    {
-        "code": "C19",
+    "1722C19": {
         "fileName": "MercilessRage",
         "name": "Merciless Rage",
         "releaseDate": "2019-08-23"
     },
-    {
-        "code": "DDT",
+    "1727DDT": {
         "fileName": "Merfolk",
         "name": "Merfolk",
         "releaseDate": "2017-11-10"
     },
-    {
-        "code": "LRW",
+    "1732LRW": {
         "fileName": "MerrowRiverways",
         "name": "Merrow Riverways",
         "releaseDate": "2007-10-12"
     },
-    {
-        "code": "SOM",
+    "1737SOM": {
         "fileName": "Metalcraft",
         "name": "Metalcraft",
         "releaseDate": "2010-10-01"
     },
-    {
-        "code": "HOP",
+    "1742HOP": {
         "fileName": "MetallicDreams",
         "name": "Metallic Dreams",
         "releaseDate": "2009-09-04"
     },
-    {
-        "code": "DDS",
+    "1747DDS": {
         "fileName": "Might",
         "name": "Might",
         "releaseDate": "2017-03-31"
     },
-    {
-        "code": "STH",
+    "1752STH": {
         "fileName": "Migraine",
         "name": "Migraine",
         "releaseDate": "1998-03-02"
     },
-    {
-        "code": "DDS",
+    "1757DDS": {
         "fileName": "Mind",
         "name": "Mind",
         "releaseDate": "2017-03-31"
     },
-    {
-        "code": "C13",
+    "1762C13": {
         "fileName": "MindSeize",
         "name": "Mind Seize",
         "releaseDate": "2013-11-01"
     },
-    {
-        "code": "DST",
+    "1767DST": {
         "fileName": "MindSwarm",
         "name": "Mind Swarm",
         "releaseDate": "2004-02-06"
     },
-    {
-        "code": "TD2",
+    "1772TD2": {
         "fileName": "MirrodinPure",
         "name": "Mirrodin Pure",
         "releaseDate": "2013-01-11"
     },
-    {
-        "code": "MBS",
+    "1777MBS": {
         "fileName": "Mirromancy",
         "name": "Mirromancy",
         "releaseDate": "2011-02-04"
     },
-    {
-        "code": "CMD",
+    "1782CMD": {
         "fileName": "MirrorMastery",
         "name": "Mirror Mastery",
         "releaseDate": "2011-06-17"
     },
-    {
-        "code": "M13",
+    "1787M13": {
         "fileName": "MobRule",
         "name": "Mob Rule",
         "releaseDate": "2012-07-13"
     },
-    {
-        "code": "10E",
+    "179210E": {
         "fileName": "MolimoSMight",
         "name": "Molimo's Might",
         "releaseDate": "2007-07-13"
     },
-    {
-        "code": "DDL",
+    "1797DDL": {
         "fileName": "Monsters",
         "name": "Monsters",
         "releaseDate": "2013-09-06"
     },
-    {
-        "code": "DKA",
+    "1802DKA": {
         "fileName": "MonstrousSurprise",
         "name": "Monstrous Surprise",
         "releaseDate": "2012-02-03"
     },
-    {
-        "code": "LGN",
+    "1807LGN": {
         "fileName": "MorphMayhem",
         "name": "Morph Mayhem",
         "releaseDate": "2003-02-03"
     },
-    {
-        "code": "SHM",
+    "1812SHM": {
         "fileName": "MortalCoil",
         "name": "Mortal Coil",
         "releaseDate": "2008-05-02"
     },
-    {
-        "code": "JOU",
+    "1817JOU": {
         "fileName": "MortalsOfMyth",
         "name": "Mortals of Myth",
         "releaseDate": "2014-05-02"
     },
-    {
-        "code": "GS1",
+    "1822GS1": {
         "fileName": "MuYanling",
         "name": "Mu Yanling",
         "releaseDate": "2018-06-22"
     },
-    {
-        "code": "M20",
+    "1827M20": {
         "fileName": "MuYanlingCelestialWind",
         "name": "Mu Yanling, Celestial Wind",
         "releaseDate": "2019-07-29"
     },
-    {
-        "code": "SOM",
+    "1832SOM": {
         "fileName": "MyrOfMirrodin",
         "name": "Myr of Mirrodin",
         "releaseDate": "2010-10-01"
     },
-    {
-        "code": "WWK",
+    "1837WWK": {
         "fileName": "MysteriousRealms",
         "name": "Mysterious Realms",
         "releaseDate": "2010-02-05"
     },
-    {
-        "code": "C19",
+    "1842C19": {
         "fileName": "MysticIntellect",
         "name": "Mystic Intellect",
         "releaseDate": "2019-08-23"
     },
-    {
-        "code": "M12",
+    "1847M12": {
         "fileName": "MysticalMight",
         "name": "Mystical Might",
         "releaseDate": "2011-07-15"
     },
-    {
-        "code": "C13",
+    "1852C13": {
         "fileName": "NatureOfTheBeast",
         "name": "Nature of the Beast",
         "releaseDate": "2013-11-01"
     },
-    {
-        "code": "P02",
+    "1857P02": {
         "fileName": "NatureSAssault",
         "name": "Nature's Assault",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "M10",
+    "1862M10": {
         "fileName": "NatureSFury",
         "name": "Nature's Fury",
         "releaseDate": "2009-07-17"
     },
-    {
-        "code": "C18",
+    "1867C18": {
         "fileName": "NatureSVengeance",
         "name": "Nature's Vengeance",
         "releaseDate": "2018-08-10"
     },
-    {
-        "code": "ALA",
+    "1872ALA": {
         "fileName": "NayaBehemoths",
         "name": "Naya Behemoths",
         "releaseDate": "2008-10-03"
     },
-    {
-        "code": "CON",
+    "1877CON": {
         "fileName": "NayaDomain",
         "name": "Naya Domain",
         "releaseDate": "2009-02-06"
     },
-    {
-        "code": "TD2",
+    "1882TD2": {
         "fileName": "NewPhyrexia",
         "name": "New Phyrexia",
         "releaseDate": "2013-01-11"
     },
-    {
-        "code": "DDH",
+    "1887DDH": {
         "fileName": "NicolBolas",
         "name": "Nicol Bolas",
         "releaseDate": "2011-09-02"
     },
-    {
-        "code": "HOU",
+    "1892HOU": {
         "fileName": "NicolBolasTheDeceiver",
         "name": "Nicol Bolas, the Deceiver",
         "releaseDate": "2017-07-14"
     },
-    {
-        "code": "PC2",
+    "1897PC2": {
         "fileName": "NightOfTheNinja",
         "name": "Night Of The Ninja",
         "releaseDate": "2012-06-01"
     },
-    {
-        "code": "PCA",
+    "1902PCA": {
         "fileName": "NightOfTheNinja",
         "name": "Night Of The Ninja",
         "releaseDate": "2016-11-25"
     },
-    {
-        "code": "MIR",
+    "1907MIR": {
         "fileName": "NightTerrors",
         "name": "Night Terrors",
         "releaseDate": "2006-12-05"
     },
-    {
-        "code": "BOK",
+    "1912BOK": {
         "fileName": "Ninjutsu",
         "name": "Ninjutsu",
         "releaseDate": "2005-02-04"
     },
-    {
-        "code": "DDR",
+    "1917DDR": {
         "fileName": "Nissa",
         "name": "Nissa",
         "releaseDate": "2016-09-02"
     },
-    {
-        "code": "E01",
+    "1922E01": {
         "fileName": "Nissa",
         "name": "Nissa",
         "releaseDate": "2017-06-16"
     },
-    {
-        "code": "HOU",
+    "1927HOU": {
         "fileName": "NissaGenesisMage",
         "name": "Nissa, Genesis Mage",
         "releaseDate": "2017-07-14"
     },
-    {
-        "code": "KLD",
+    "1932KLD": {
         "fileName": "NissaNatureSArtisan",
         "name": "Nissa, Nature's Artisan",
         "releaseDate": "2016-09-30"
     },
-    {
-        "code": "5DN",
+    "19375DN": {
         "fileName": "NutsAndBolts",
         "name": "Nuts and Bolts",
         "releaseDate": "2004-06-04"
     },
-    {
-        "code": "DDR",
+    "1942DDR": {
         "fileName": "ObNixilis",
         "name": "Ob Nixilis",
         "releaseDate": "2016-09-02"
     },
-    {
-        "code": "ELD",
+    "1947ELD": {
         "fileName": "OkoTheTrickster",
         "name": "Oko, the Trickster",
         "releaseDate": "2019-10-04"
     },
-    {
-        "code": "ODY",
+    "1952ODY": {
         "fileName": "OneTwoPunch",
         "name": "One-Two Punch",
         "releaseDate": "2001-10-01"
     },
-    {
-        "code": "C16",
+    "1957C16": {
         "fileName": "OpenHostility",
         "name": "Open Hostility",
         "releaseDate": "2016-11-11"
     },
-    {
-        "code": "ME2",
+    "1962ME2": {
         "fileName": "OrcAttack",
         "name": "Orc Attack",
         "releaseDate": "2008-09-22"
     },
-    {
-        "code": "GK2",
+    "1967GK2": {
         "fileName": "Orzhov",
         "name": "Orzhov",
         "releaseDate": "2019-02-15"
     },
-    {
-        "code": "GTC",
+    "1972GTC": {
         "fileName": "OrzhovOppression",
         "name": "Orzhov Oppression",
         "releaseDate": "2013-02-01"
     },
-    {
-        "code": "DGM",
+    "1977DGM": {
         "fileName": "OrzhovPower",
         "name": "Orzhov Power",
         "releaseDate": "2013-05-03"
     },
-    {
-        "code": "SHM",
+    "1982SHM": {
         "fileName": "Overkill",
         "name": "Overkill",
         "releaseDate": "2008-05-02"
     },
-    {
-        "code": "JUD",
+    "1987JUD": {
         "fileName": "Painflow",
         "name": "Painflow",
         "releaseDate": "2002-05-27"
     },
-    {
-        "code": "APC",
+    "1992APC": {
         "fileName": "Pandemonium",
         "name": "Pandemonium",
         "releaseDate": "2001-06-04"
     },
-    {
-        "code": "JOU",
+    "1997JOU": {
         "fileName": "PantheonSPower",
         "name": "Pantheon's Power",
         "releaseDate": "2014-05-02"
     },
-    {
-        "code": "MBS",
+    "2002MBS": {
         "fileName": "PathOfBlight",
         "name": "Path of Blight",
         "releaseDate": "2011-02-04"
     },
-    {
-        "code": "M13",
+    "2007M13": {
         "fileName": "PathToVictory",
         "name": "Path to Victory",
         "releaseDate": "2012-07-13"
     },
-    {
-        "code": "C14",
+    "2012C14": {
         "fileName": "PeerThroughTime",
         "name": "Peer Through Time",
         "releaseDate": "2014-11-07"
     },
-    {
-        "code": "DDE",
+    "2017DDE": {
         "fileName": "Phyrexia",
         "name": "Phyrexia",
         "releaseDate": "2010-03-19"
     },
-    {
-        "code": "ULG",
+    "2022ULG": {
         "fileName": "PhyrexianAssault",
         "name": "Phyrexian Assault",
         "releaseDate": "1999-02-15"
     },
-    {
-        "code": "SOM",
+    "2027SOM": {
         "fileName": "PhyrexianPoison",
         "name": "Phyrexian Poison",
         "releaseDate": "2010-10-01"
     },
-    {
-        "code": "S00",
+    "2032S00": {
         "fileName": "PlayerASAdvancedPack",
         "name": "Player A's advanced pack",
         "releaseDate": "2000-04-24"
     },
-    {
-        "code": "S00",
+    "2037S00": {
         "fileName": "PlayerASDeck",
         "name": "Player A's deck",
         "releaseDate": "2000-04-24"
     },
-    {
-        "code": "S00",
+    "2042S00": {
         "fileName": "PlayerBSAdvancedPack",
         "name": "Player B's advanced pack",
         "releaseDate": "2000-04-24"
     },
-    {
-        "code": "S00",
+    "2047S00": {
         "fileName": "PlayerBSDeck",
         "name": "Player B's deck",
         "releaseDate": "2000-04-24"
     },
-    {
-        "code": "C15",
+    "2052C15": {
         "fileName": "PlunderTheGraves",
         "name": "Plunder the Graves",
         "releaseDate": "2015-11-13"
     },
-    {
-        "code": "CMA",
+    "2057CMA": {
         "fileName": "PlunderTheGraves",
         "name": "Plunder the Graves",
         "releaseDate": "2017-06-09"
     },
-    {
-        "code": "CMD",
+    "2062CMD": {
         "fileName": "PoliticalPuppets",
         "name": "Political Puppets",
         "releaseDate": "2011-06-17"
     },
-    {
-        "code": "FRF",
+    "2067FRF": {
         "fileName": "Power",
         "name": "Power",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "C13",
+    "2072C13": {
         "fileName": "PowerHungry",
         "name": "Power Hungry",
         "releaseDate": "2013-11-01"
     },
-    {
-        "code": "FRF",
+    "2077FRF": {
         "fileName": "PowerAndProfit",
         "name": "Power and Profit",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "M11",
+    "2082M11": {
         "fileName": "PowerOfProphecy",
         "name": "Power of Prophecy",
         "releaseDate": "2010-07-16"
     },
-    {
-        "code": "POR",
+    "2087POR": {
         "fileName": "PreconstructedDeck1",
         "name": "Preconstructed deck 1",
         "releaseDate": "1997-05-01"
     },
-    {
-        "code": "P02",
+    "2092P02": {
         "fileName": "PreconstructedDeck1",
         "name": "Preconstructed deck 1",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "PTK",
+    "2097PTK": {
         "fileName": "PreconstructedDeck1",
         "name": "Preconstructed deck 1",
         "releaseDate": "1999-05-01"
     },
-    {
-        "code": "S99",
+    "2102S99": {
         "fileName": "PreconstructedDeck1",
         "name": "Preconstructed deck 1",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "POR",
+    "2107POR": {
         "fileName": "PreconstructedDeck2",
         "name": "Preconstructed deck 2",
         "releaseDate": "1997-05-01"
     },
-    {
-        "code": "P02",
+    "2112P02": {
         "fileName": "PreconstructedDeck2",
         "name": "Preconstructed deck 2",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "PTK",
+    "2117PTK": {
         "fileName": "PreconstructedDeck2",
         "name": "Preconstructed deck 2",
         "releaseDate": "1999-05-01"
     },
-    {
-        "code": "S99",
+    "2122S99": {
         "fileName": "PreconstructedDeck2",
         "name": "Preconstructed deck 2",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "M10",
+    "2127M10": {
         "fileName": "PresenceOfMind",
         "name": "Presence of Mind",
         "releaseDate": "2009-07-17"
     },
-    {
-        "code": "ODY",
+    "2132ODY": {
         "fileName": "PressureCooker",
         "name": "Pressure Cooker",
         "releaseDate": "2001-10-01"
     },
-    {
-        "code": "M15",
+    "2137M15": {
         "fileName": "PriceOfGlory",
         "name": "Price Of Glory",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "C19",
+    "2142C19": {
         "fileName": "PrimalGenesis",
         "name": "Primal Genesis",
         "releaseDate": "2019-08-23"
     },
-    {
-        "code": "PC2",
+    "2147PC2": {
         "fileName": "PrimordialHunger",
         "name": "Primordial Hunger",
         "releaseDate": "2012-06-01"
     },
-    {
-        "code": "PCA",
+    "2152PCA": {
         "fileName": "PrimordialHunger",
         "name": "Primordial Hunger",
         "releaseDate": "2016-11-25"
     },
-    {
-        "code": "ALA",
+    "2157ALA": {
         "fileName": "PrimordialJund",
         "name": "Primordial Jund",
         "releaseDate": "2008-10-03"
     },
-    {
-        "code": "FRF",
+    "2162FRF": {
         "fileName": "Profit",
         "name": "Profit",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "M14",
+    "2167M14": {
         "fileName": "PsychicLabyrinth",
         "name": "Psychic Labyrinth",
         "releaseDate": "2013-07-19"
     },
-    {
-        "code": "SCG",
+    "2172SCG": {
         "fileName": "Pulverize",
         "name": "Pulverize",
         "releaseDate": "2003-05-26"
     },
-    {
-        "code": "PCY",
+    "2177PCY": {
         "fileName": "Pummel",
         "name": "Pummel",
         "releaseDate": "2000-06-05"
     },
-    {
-        "code": "ZEN",
+    "2182ZEN": {
         "fileName": "PumpedUp",
         "name": "Pumped Up",
         "releaseDate": "2009-10-02"
     },
-    {
-        "code": "ULG",
+    "2187ULG": {
         "fileName": "RadiantSRevenge",
         "name": "Radiant's Revenge",
         "releaseDate": "1999-02-15"
     },
-    {
-        "code": "GK2",
+    "2192GK2": {
         "fileName": "Rakdos",
         "name": "Rakdos",
         "releaseDate": "2019-02-15"
     },
-    {
-        "code": "DIS",
+    "2197DIS": {
         "fileName": "RakdosBloodsport",
         "name": "Rakdos Bloodsport",
         "releaseDate": "2006-05-05"
     },
-    {
-        "code": "RTR",
+    "2202RTR": {
         "fileName": "RakdosRaid",
         "name": "Rakdos Raid",
         "releaseDate": "2012-10-05"
     },
-    {
-        "code": "DGM",
+    "2207DGM": {
         "fileName": "RakdosRevelry",
         "name": "Rakdos Revelry",
         "releaseDate": "2013-05-03"
     },
-    {
-        "code": "GRN",
+    "2212GRN": {
         "fileName": "RalCallerOfStorms",
         "name": "Ral, Caller of Storms",
         "releaseDate": "2018-10-05"
     },
-    {
-        "code": "GTC",
+    "2217GTC": {
         "fileName": "RallyAndRout",
         "name": "Rally and Rout",
         "releaseDate": "2013-02-22"
     },
-    {
-        "code": "BFZ",
+    "2222BFZ": {
         "fileName": "RallyingCry",
         "name": "Rallying Cry",
         "releaseDate": "2015-10-02"
     },
-    {
-        "code": "WWK",
+    "2227WWK": {
         "fileName": "RapidFire",
         "name": "Rapid Fire",
         "releaseDate": "2010-02-05"
     },
-    {
-        "code": "BOK",
+    "2232BOK": {
         "fileName": "RatsNest",
         "name": "Rats' Nest",
         "releaseDate": "2005-02-04"
     },
-    {
-        "code": "NPH",
+    "2237NPH": {
         "fileName": "RavagingSwarm",
         "name": "Ravaging Swarm",
         "releaseDate": "2011-05-13"
     },
-    {
-        "code": "TSP",
+    "2242TSP": {
         "fileName": "RealityFracture",
         "name": "Reality Fracture",
         "releaseDate": "2006-10-06"
     },
-    {
-        "code": "MMQ",
+    "2247MMQ": {
         "fileName": "RebelSCall",
         "name": "Rebel's Call",
         "releaseDate": "1999-10-04"
     },
-    {
-        "code": "FUT",
+    "2252FUT": {
         "fileName": "RebelsUnite",
         "name": "Rebels Unite",
         "releaseDate": "2007-05-04"
     },
-    {
-        "code": "GNT",
+    "2257GNT": {
         "fileName": "Red",
         "name": "Red",
         "releaseDate": "2018-11-16"
     },
-    {
-        "code": "W16",
+    "2262W16": {
         "fileName": "RedDeck",
         "name": "Red Deck",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "M20",
+    "2267M20": {
         "fileName": "RedDeck",
         "name": "Red Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "M11",
+    "2272M11": {
         "fileName": "ReignOfVampirism",
         "name": "Reign of Vampirism",
         "releaseDate": "2010-07-16"
     },
-    {
-        "code": "DKA",
+    "2277DKA": {
         "fileName": "RelentlessDead",
         "name": "Relentless Dead",
         "releaseDate": "2012-02-03"
     },
-    {
-        "code": "DTK",
+    "2282DTK": {
         "fileName": "RelentlessRush",
         "name": "Relentless Rush",
         "releaseDate": "2015-03-27"
     },
-    {
-        "code": "SOM",
+    "2287SOM": {
         "fileName": "RelicBreaker",
         "name": "Relic Breaker",
         "releaseDate": "2010-10-01"
     },
-    {
-        "code": "M13",
+    "2292M13": {
         "fileName": "RepeatPerformance",
         "name": "Repeat Performance",
         "releaseDate": "2012-08-03"
     },
-    {
-        "code": "ISD",
+    "2297ISD": {
         "fileName": "RepelTheDark",
         "name": "Repel the Dark",
         "releaseDate": "2011-09-30"
     },
-    {
-        "code": "NEM",
+    "2302NEM": {
         "fileName": "Replicator",
         "name": "Replicator",
         "releaseDate": "2000-02-14"
     },
-    {
-        "code": "MIR",
+    "2307MIR": {
         "fileName": "RideLikeTheWind",
         "name": "Ride Like the Wind",
         "releaseDate": "2006-12-05"
     },
-    {
-        "code": "ZEN",
+    "2312ZEN": {
         "fileName": "RiseOfTheVampires",
         "name": "Rise of the Vampires",
         "releaseDate": "2009-10-02"
     },
-    {
-        "code": "PLC",
+    "2317PLC": {
         "fileName": "RitualsOfRebirth",
         "name": "Rituals of Rebirth",
         "releaseDate": "2007-02-02"
     },
-    {
-        "code": "E02",
+    "2322E02": {
         "fileName": "RiverHeralds",
         "name": "River Heralds",
         "releaseDate": "2017-11-24"
     },
-    {
-        "code": "NPH",
+    "2327NPH": {
         "fileName": "RotFromWithin",
         "name": "Rot from Within",
         "releaseDate": "2011-06-10"
     },
-    {
-        "code": "ELD",
+    "2332ELD": {
         "fileName": "RowanFearlessSparkmage",
         "name": "Rowan, Fearless Sparkmage",
         "releaseDate": "2019-10-04"
     },
-    {
-        "code": "ARB",
+    "2337ARB": {
         "fileName": "Rumbler",
         "name": "Rumbler",
         "releaseDate": "2009-04-30"
     },
-    {
-        "code": "M14",
+    "2342M14": {
         "fileName": "RushOfTheWild",
         "name": "Rush of the Wild",
         "releaseDate": "2013-08-09"
     },
-    {
-        "code": "M12",
+    "2347M12": {
         "fileName": "SacredAssault",
         "name": "Sacred Assault",
         "releaseDate": "2011-07-15"
     },
-    {
-        "code": "MRD",
+    "2352MRD": {
         "fileName": "SacrificialBam",
         "name": "Sacrificial Bam",
         "releaseDate": "2003-10-02"
     },
-    {
-        "code": "TOR",
+    "2357TOR": {
         "fileName": "Sacrilege",
         "name": "Sacrilege",
         "releaseDate": "2002-02-08"
     },
-    {
-        "code": "M19",
+    "2362M19": {
         "fileName": "Sarkhan",
         "name": "Sarkhan",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "PC2",
+    "2367PC2": {
         "fileName": "SavageAuras",
         "name": "Savage Auras",
         "releaseDate": "2012-06-01"
     },
-    {
-        "code": "PCA",
+    "2372PCA": {
         "fileName": "SavageAuras",
         "name": "Savage Auras",
         "releaseDate": "2016-11-25"
     },
-    {
-        "code": "ELD",
+    "2377ELD": {
         "fileName": "SavageHunter",
         "name": "Savage Hunter",
         "releaseDate": "2019-10-04"
     },
-    {
-        "code": "VIS",
+    "2382VIS": {
         "fileName": "SavageStompdown",
         "name": "Savage Stompdown",
         "releaseDate": "2006-04-10"
     },
-    {
-        "code": "ARC",
+    "2387ARC": {
         "fileName": "ScorchTheWorldWithDragonfire",
         "name": "Scorch The World With Dragonfire",
         "releaseDate": "2010-06-18"
     },
-    {
-        "code": "PLS",
+    "2392PLS": {
         "fileName": "Scout",
         "name": "Scout",
         "releaseDate": "2001-02-05"
     },
-    {
-        "code": "RIX",
+    "2397RIX": {
         "fileName": "SecondSunControl",
         "name": "Second Sun Control",
         "releaseDate": "2018-04-06"
     },
-    {
-        "code": "C15",
+    "2402C15": {
         "fileName": "SeizeControl",
         "name": "Seize Control",
         "releaseDate": "2015-11-13"
     },
-    {
-        "code": "GK1",
+    "2407GK1": {
         "fileName": "Selesnya",
         "name": "Selesnya",
         "releaseDate": "2018-11-02"
     },
-    {
-        "code": "RTR",
+    "2412RTR": {
         "fileName": "SelesnyaSurge",
         "name": "Selesnya Surge",
         "releaseDate": "2012-10-05"
     },
-    {
-        "code": "RAV",
+    "2417RAV": {
         "fileName": "SelesnyaUnited",
         "name": "Selesnya United",
         "releaseDate": "2005-10-07"
     },
-    {
-        "code": "EMN",
+    "2422EMN": {
         "fileName": "ShallowGraves",
         "name": "Shallow Graves",
         "releaseDate": "2016-07-22"
     },
-    {
-        "code": "MOR",
+    "2427MOR": {
         "fileName": "Shamanism",
         "name": "Shamanism",
         "releaseDate": "2008-02-01"
     },
-    {
-        "code": "PTK",
+    "2432PTK": {
         "fileName": "ShuKingdom",
         "name": "Shu Kingdom",
         "releaseDate": "1999-05-01"
     },
-    {
-        "code": "EVE",
+    "2437EVE": {
         "fileName": "Sidestep",
         "name": "Sidestep",
         "releaseDate": "2008-07-25"
     },
-    {
-        "code": "GK2",
+    "2442GK2": {
         "fileName": "Simic",
         "name": "Simic",
         "releaseDate": "2019-02-15"
     },
-    {
-        "code": "DGM",
+    "2447DGM": {
         "fileName": "SimicDomination",
         "name": "Simic Domination",
         "releaseDate": "2013-05-03"
     },
-    {
-        "code": "DIS",
+    "2452DIS": {
         "fileName": "SimicMutology",
         "name": "Simic Mutology",
         "releaseDate": "2006-05-05"
     },
-    {
-        "code": "GTC",
+    "2457GTC": {
         "fileName": "SimicSynthesis",
         "name": "Simic Synthesis",
         "releaseDate": "2013-02-01"
     },
-    {
-        "code": "8ED",
+    "24628ED": {
         "fileName": "SkySlam",
         "name": "Sky Slam",
         "releaseDate": "2003-07-28"
     },
-    {
-        "code": "AVR",
+    "2467AVR": {
         "fileName": "Slaughterhouse",
         "name": "Slaughterhouse",
         "releaseDate": "2012-05-04"
     },
-    {
-        "code": "USG",
+    "2472USG": {
         "fileName": "Sleeper",
         "name": "Sleeper",
         "releaseDate": "1998-10-12"
     },
-    {
-        "code": "PCY",
+    "2477PCY": {
         "fileName": "Slither",
         "name": "Slither",
         "releaseDate": "2000-06-05"
     },
-    {
-        "code": "TSP",
+    "2482TSP": {
         "fileName": "SliverEvolution",
         "name": "Sliver Evolution",
         "releaseDate": "2006-10-06"
     },
-    {
-        "code": "LGN",
+    "2487LGN": {
         "fileName": "SliverShivers",
         "name": "Sliver Shivers",
         "releaseDate": "2003-02-03"
     },
-    {
-        "code": "H09",
+    "2492H09": {
         "fileName": "Slivers",
         "name": "Slivers",
         "releaseDate": "2009-11-20"
     },
-    {
-        "code": "CHK",
+    "2497CHK": {
         "fileName": "SnakeSPath",
         "name": "Snake's Path",
         "releaseDate": "2004-10-01"
     },
-    {
-        "code": "CSP",
+    "2502CSP": {
         "fileName": "Snowscape",
         "name": "Snowscape",
         "releaseDate": "2006-07-21"
     },
-    {
-        "code": "M13",
+    "2507M13": {
         "fileName": "SoleDomination",
         "name": "Sole Domination",
         "releaseDate": "2012-07-13"
     },
-    {
-        "code": "AVR",
+    "2512AVR": {
         "fileName": "SolitaryFiends",
         "name": "Solitary Fiends",
         "releaseDate": "2012-05-04"
     },
-    {
-        "code": "SOK",
+    "2517SOK": {
         "fileName": "SoratamiSWisdom",
         "name": "Soratami's Wisdom",
         "releaseDate": "2005-06-03"
     },
-    {
-        "code": "DDK",
+    "2522DDK": {
         "fileName": "Sorin",
         "name": "Sorin",
         "releaseDate": "2013-03-15"
     },
-    {
-        "code": "M20",
+    "2527M20": {
         "fileName": "SorinVampireLord",
         "name": "Sorin, Vampire Lord",
         "releaseDate": "2019-07-29"
     },
-    {
-        "code": "USG",
+    "2532USG": {
         "fileName": "SpecialDelivery",
         "name": "Special Delivery",
         "releaseDate": "1998-10-12"
     },
-    {
-        "code": "5DN",
+    "25375DN": {
         "fileName": "SpecialForces",
         "name": "Special Forces",
         "releaseDate": "2004-06-04"
     },
-    {
-        "code": "ISD",
+    "2542ISD": {
         "fileName": "SpectralLegions",
         "name": "Spectral Legions",
         "releaseDate": "2011-09-30"
     },
-    {
-        "code": "JUD",
+    "2547JUD": {
         "fileName": "SpectralSlam",
         "name": "Spectral Slam",
         "releaseDate": "2002-05-27"
     },
-    {
-        "code": "INV",
+    "2552INV": {
         "fileName": "Spectrum",
         "name": "Spectrum",
         "releaseDate": "2000-10-02"
     },
-    {
-        "code": "DDN",
+    "2557DDN": {
         "fileName": "Speed",
         "name": "Speed",
         "releaseDate": "2014-09-05"
     },
-    {
-        "code": "8ED",
+    "25628ED": {
         "fileName": "SpeedScorch",
         "name": "Speed Scorch",
         "releaseDate": "2003-07-28"
     },
-    {
-        "code": "M20",
+    "2567M20": {
         "fileName": "SpellslingerStarterKitRedDeck",
         "name": "Spellslinger Starter Kit - Red Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "M20",
+    "2572M20": {
         "fileName": "SpellslingerStarterKitWhiteDeck",
         "name": "Spellslinger Starter Kit - White Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "P02",
+    "2577P02": {
         "fileName": "Spellweaver",
         "name": "Spellweaver",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "DKA",
+    "2582DKA": {
         "fileName": "SpiralingDoom",
         "name": "Spiraling Doom",
         "releaseDate": "2012-02-24"
     },
-    {
-        "code": "SOK",
+    "2587SOK": {
         "fileName": "SpiritFlames",
         "name": "Spirit Flames",
         "releaseDate": "2005-06-03"
     },
-    {
-        "code": "BRB",
+    "2592BRB": {
         "fileName": "SpiritGale",
         "name": "Spirit Gale",
         "releaseDate": "1999-11-12"
     },
-    {
-        "code": "CHK",
+    "2597CHK": {
         "fileName": "Spiritbane",
         "name": "Spiritbane",
         "releaseDate": "2004-10-01"
     },
-    {
-        "code": "BOK",
+    "2602BOK": {
         "fileName": "Spiritcraft",
         "name": "Spiritcraft",
         "releaseDate": "2005-02-04"
     },
-    {
-        "code": "C16",
+    "2607C16": {
         "fileName": "StalwartUnity",
         "name": "Stalwart Unity",
         "releaseDate": "2016-11-11"
     },
-    {
-        "code": "5DN",
+    "26125DN": {
         "fileName": "Stampede",
         "name": "Stampede",
         "releaseDate": "2004-06-04"
     },
-    {
-        "code": "M11",
+    "2617M11": {
         "fileName": "StampedeOfBeasts",
         "name": "Stampede of Beasts",
         "releaseDate": "2010-07-16"
     },
-    {
-        "code": "FRF",
+    "2622FRF": {
         "fileName": "StampedingHordes",
         "name": "Stampeding Hordes",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "SCG",
+    "2627SCG": {
         "fileName": "StormSurge",
         "name": "Storm Surge",
         "releaseDate": "2003-05-26"
     },
-    {
-        "code": "DGM",
+    "2632DGM": {
         "fileName": "StrengthOfSelesnya",
         "name": "Strength Of Selesnya",
         "releaseDate": "2013-05-24"
     },
-    {
-        "code": "HOP",
+    "2637HOP": {
         "fileName": "StrikeForce",
         "name": "Strike Force",
         "releaseDate": "2009-09-04"
     },
-    {
-        "code": "C18",
+    "2642C18": {
         "fileName": "SubjectiveReality",
         "name": "Subjective Reality",
         "releaseDate": "2018-08-10"
     },
-    {
-        "code": "KTK",
+    "2647KTK": {
         "fileName": "SultaiSchemers",
         "name": "Sultai Schemers",
         "releaseDate": "2014-09-26"
     },
-    {
-        "code": "E02",
+    "2652E02": {
         "fileName": "SunEmpire",
         "name": "Sun Empire",
         "releaseDate": "2017-11-24"
     },
-    {
-        "code": "5DN",
+    "26575DN": {
         "fileName": "Sunburst",
         "name": "Sunburst",
         "releaseDate": "2004-06-04"
     },
-    {
-        "code": "EVE",
+    "2662EVE": {
         "fileName": "Superabundance",
         "name": "Superabundance",
         "releaseDate": "2008-07-25"
     },
-    {
-        "code": "OGW",
+    "2667OGW": {
         "fileName": "SurgeOfResistance",
         "name": "Surge of Resistance",
         "releaseDate": "2016-01-22"
     },
-    {
-        "code": "FRF",
+    "2672FRF": {
         "fileName": "SurpriseAttack",
         "name": "Surprise Attack",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "FUT",
+    "2677FUT": {
         "fileName": "SuspendedSentence",
         "name": "Suspended Sentence",
         "releaseDate": "2007-05-04"
     },
-    {
-        "code": "DST",
+    "2682DST": {
         "fileName": "SwarmSlam",
         "name": "Swarm & Slam",
         "releaseDate": "2004-02-06"
     },
-    {
-        "code": "BFZ",
+    "2687BFZ": {
         "fileName": "SwarmingInstinct",
         "name": "Swarming Instinct",
         "releaseDate": "2015-10-02"
     },
-    {
-        "code": "M13",
+    "2692M13": {
         "fileName": "SweetRevenge",
         "name": "Sweet Revenge",
         "releaseDate": "2012-08-03"
     },
-    {
-        "code": "C15",
+    "2697C15": {
         "fileName": "SwellTheHost",
         "name": "Swell the Host",
         "releaseDate": "2015-11-13"
     },
-    {
-        "code": "DKA",
+    "2702DKA": {
         "fileName": "SwiftJustice",
         "name": "Swift Justice",
         "releaseDate": "2012-02-03"
     },
-    {
-        "code": "APC",
+    "2707APC": {
         "fileName": "Swoop",
         "name": "Swoop",
         "releaseDate": "2001-06-04"
     },
-    {
-        "code": "C14",
+    "2712C14": {
         "fileName": "SwornToDarkness",
         "name": "Sworn To Darkness",
         "releaseDate": "2014-11-07"
     },
-    {
-        "code": "ORI",
+    "2717ORI": {
         "fileName": "TakeToTheSky",
         "name": "Take to the Sky",
         "releaseDate": "2015-07-17"
     },
-    {
-        "code": "DPA",
+    "2722DPA": {
         "fileName": "TeethOfThePredatorTheGarrukWildspeakerDeck",
         "name": "Teeth of the Predator - The Garruk Wildspeaker Deck",
         "releaseDate": "2010-06-04"
     },
-    {
-        "code": "DOM",
+    "2727DOM": {
         "fileName": "TeferiTimebender",
         "name": "Teferi, Timebender",
         "releaseDate": "2018-04-27"
     },
-    {
-        "code": "KTK",
+    "2732KTK": {
         "fileName": "TemurAvalanche",
         "name": "Temur Avalanche",
         "releaseDate": "2014-09-26"
     },
-    {
-        "code": "DDF",
+    "2737DDF": {
         "fileName": "Tezzeret",
         "name": "Tezzeret",
         "releaseDate": "2010-09-03"
     },
-    {
-        "code": "M19",
+    "2742M19": {
         "fileName": "Tezzeret",
         "name": "Tezzeret",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "AER",
+    "2747AER": {
         "fileName": "TezzeretMasterOfMetal",
         "name": "Tezzeret, Master of Metal",
         "releaseDate": "2017-01-20"
     },
-    {
-        "code": "ZEN",
+    "2752ZEN": {
         "fileName": "TheAdventurers",
         "name": "The Adventurers",
         "releaseDate": "2009-10-02"
     },
-    {
-        "code": "DDE",
+    "2757DDE": {
         "fileName": "TheCoalition",
         "name": "The Coalition",
         "releaseDate": "2010-03-19"
     },
-    {
-        "code": "BRB",
+    "2762BRB": {
         "fileName": "TheDeluge",
         "name": "The Deluge",
         "releaseDate": "1999-11-12"
     },
-    {
-        "code": "TMP",
+    "2767TMP": {
         "fileName": "TheFlamesOfRath",
         "name": "The Flames of Rath",
         "releaseDate": "1997-10-14"
     },
-    {
-        "code": "P02",
+    "2772P02": {
         "fileName": "TheNightstalkers",
         "name": "The Nightstalkers",
         "releaseDate": "1998-06-24"
     },
-    {
-        "code": "USG",
+    "2777USG": {
         "fileName": "ThePlague",
         "name": "The Plague",
         "releaseDate": "1998-10-12"
     },
-    {
-        "code": "TMP",
+    "2782TMP": {
         "fileName": "TheSlivers",
         "name": "The Slivers",
         "releaseDate": "1997-10-14"
     },
-    {
-        "code": "STH",
+    "2787STH": {
         "fileName": "TheSparkler",
         "name": "The Sparkler",
         "releaseDate": "1998-03-02"
     },
-    {
-        "code": "STH",
+    "2792STH": {
         "fileName": "TheSpikes",
         "name": "The Spikes",
         "releaseDate": "1998-03-02"
     },
-    {
-        "code": "TMP",
+    "2797TMP": {
         "fileName": "TheSwarm",
         "name": "The Swarm",
         "releaseDate": "1997-10-14"
     },
-    {
-        "code": "JOU",
+    "2802JOU": {
         "fileName": "TheWildsAndTheDeep",
         "name": "The Wilds and the Deep",
         "releaseDate": "2014-05-02"
     },
-    {
-        "code": "DPA",
+    "2807DPA": {
         "fileName": "ThoughtsOfTheWindTheJaceBelerenDeck",
         "name": "Thoughts of the Wind - The Jace Beleren Deck",
         "releaseDate": "2010-06-04"
     },
-    {
-        "code": "GTC",
+    "2812GTC": {
         "fileName": "ThriveAndThrash",
         "name": "Thrive and Thrash",
         "releaseDate": "2013-02-22"
     },
-    {
-        "code": "DDK",
+    "2817DDK": {
         "fileName": "Tibalt",
         "name": "Tibalt",
         "releaseDate": "2013-03-15"
     },
-    {
-        "code": "MMQ",
+    "2822MMQ": {
         "fileName": "TidalMastery",
         "name": "Tidal Mastery",
         "releaseDate": "1999-10-04"
     },
-    {
-        "code": "S99",
+    "2827S99": {
         "fileName": "TimeCurse",
         "name": "Time Curse",
         "releaseDate": "1999-07-12"
     },
-    {
-        "code": "ULG",
+    "2832ULG": {
         "fileName": "TimeDrain",
         "name": "Time Drain",
         "releaseDate": "1999-02-15"
     },
-    {
-        "code": "USG",
+    "2837USG": {
         "fileName": "Tombstone",
         "name": "Tombstone",
         "releaseDate": "1998-10-12"
     },
-    {
-        "code": "ROE",
+    "2842ROE": {
         "fileName": "TotemPower",
         "name": "Totem Power",
         "releaseDate": "2010-04-23"
     },
-    {
-        "code": "ARC",
+    "2847ARC": {
         "fileName": "TrampleCivilizationUnderfoot",
         "name": "Trample Civilization Underfoot",
         "releaseDate": "2010-06-18"
     },
-    {
-        "code": "DST",
+    "2852DST": {
         "fileName": "Transference",
         "name": "Transference",
         "releaseDate": "2004-02-06"
     },
-    {
-        "code": "ODY",
+    "2857ODY": {
         "fileName": "TrounceOMatic",
         "name": "Trounce-O-Matic",
         "releaseDate": "2001-10-01"
     },
-    {
-        "code": "SOK",
+    "2862SOK": {
         "fileName": "TruthSeekers",
         "name": "Truth Seekers",
         "releaseDate": "2005-06-03"
     },
-    {
-        "code": "SHM",
+    "2867SHM": {
         "fileName": "Turnabout",
         "name": "Turnabout",
         "releaseDate": "2008-05-02"
     },
-    {
-        "code": "PCY",
+    "2872PCY": {
         "fileName": "Turnaround",
         "name": "Turnaround",
         "releaseDate": "2000-06-05"
     },
-    {
-        "code": "OGW",
+    "2877OGW": {
         "fileName": "TwistedReality",
         "name": "Twisted Reality",
         "releaseDate": "2016-01-22"
     },
-    {
-        "code": "BFZ",
+    "2882BFZ": {
         "fileName": "UltimateSacrifice",
         "name": "Ultimate Sacrifice",
         "releaseDate": "2015-10-02"
     },
-    {
-        "code": "BNG",
+    "2887BNG": {
         "fileName": "UnderworldHerald",
         "name": "Underworld Herald",
         "releaseDate": "2014-02-28"
     },
-    {
-        "code": "SOI",
+    "2892SOI": {
         "fileName": "UnearthedSecrets",
         "name": "Unearthed Secrets",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "FRF",
+    "2897FRF": {
         "fileName": "UnflinchingAssault",
         "name": "Unflinching Assault",
         "releaseDate": "2015-01-23"
     },
-    {
-        "code": "GRN",
+    "2902GRN": {
         "fileName": "UnitedAssault",
         "name": "United Assault",
         "releaseDate": "2019-04-12"
     },
-    {
-        "code": "EMN",
+    "2907EMN": {
         "fileName": "UnlikelyAlliances",
         "name": "Unlikely Alliances",
         "releaseDate": "2016-07-22"
     },
-    {
-        "code": "VIS",
+    "2912VIS": {
         "fileName": "UnnaturalForces",
         "name": "Unnatural Forces",
         "releaseDate": "2006-04-10"
     },
-    {
-        "code": "ARB",
+    "2917ARB": {
         "fileName": "UnnaturalSchemes",
         "name": "Unnatural Schemes",
         "releaseDate": "2009-04-30"
     },
-    {
-        "code": "PLC",
+    "2922PLC": {
         "fileName": "UnravelingMind",
         "name": "Unraveling Mind",
         "releaseDate": "2007-02-02"
     },
-    {
-        "code": "ZEN",
+    "2927ZEN": {
         "fileName": "UnstableTerrain",
         "name": "Unstable Terrain",
         "releaseDate": "2009-10-02"
     },
-    {
-        "code": "EMN",
+    "2932EMN": {
         "fileName": "UntamedWild",
         "name": "Untamed Wild",
         "releaseDate": "2016-07-22"
     },
-    {
-        "code": "M12",
+    "2937M12": {
         "fileName": "VampireOnslaught",
         "name": "Vampire Onslaught",
         "releaseDate": "2011-08-12"
     },
-    {
-        "code": "C17",
+    "2942C17": {
         "fileName": "VampiricBloodlust",
         "name": "Vampiric Bloodlust",
         "releaseDate": "2017-08-25"
     },
-    {
-        "code": "SOI",
+    "2947SOI": {
         "fileName": "VampiricThirst",
         "name": "Vampiric Thirst",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "RIX",
+    "2952RIX": {
         "fileName": "VehicleRush",
         "name": "Vehicle Rush",
         "releaseDate": "2018-04-06"
     },
-    {
-        "code": "DDI",
+    "2957DDI": {
         "fileName": "Venser",
         "name": "Venser",
         "releaseDate": "2012-03-30"
     },
-    {
-        "code": "OGW",
+    "2962OGW": {
         "fileName": "ViciousCycle",
         "name": "Vicious Cycle",
         "releaseDate": "2016-01-22"
     },
-    {
-        "code": "M19",
+    "2967M19": {
         "fileName": "Vivien",
         "name": "Vivien",
         "releaseDate": "2018-07-13"
     },
-    {
-        "code": "M20",
+    "2972M20": {
         "fileName": "VivienNatureSAvenger",
         "name": "Vivien, Nature's Avenger",
         "releaseDate": "2019-07-29"
     },
-    {
-        "code": "JOU",
+    "2977JOU": {
         "fileName": "VoraciousRage",
         "name": "Voracious Rage",
         "releaseDate": "2014-05-02"
     },
-    {
-        "code": "DDM",
+    "2982DDM": {
         "fileName": "Vraska",
         "name": "Vraska",
         "releaseDate": "2014-03-14"
     },
-    {
-        "code": "GRN",
+    "2987GRN": {
         "fileName": "VraskaRegalGorgon",
         "name": "Vraska, Regal Gorgon",
         "releaseDate": "2018-10-05"
     },
-    {
-        "code": "RIX",
+    "2992RIX": {
         "fileName": "VraskaSchemingGorgon",
         "name": "Vraska, Scheming Gorgon",
         "releaseDate": "2018-01-19"
     },
-    {
-        "code": "C15",
+    "2997C15": {
         "fileName": "WadeIntoBattle",
         "name": "Wade into Battle",
         "releaseDate": "2015-11-13"
     },
-    {
-        "code": "CM2",
+    "3002CM2": {
         "fileName": "WadeIntoBattle",
         "name": "Wade into Battle",
         "releaseDate": "2018-06-08"
     },
-    {
-        "code": "TOR",
+    "3007TOR": {
         "fileName": "WakingNightmares",
         "name": "Waking Nightmares",
         "releaseDate": "2002-02-08"
     },
-    {
-        "code": "NPH",
+    "3012NPH": {
         "fileName": "WarOfAttrition",
         "name": "War of Attrition",
         "releaseDate": "2011-06-10"
     },
-    {
-        "code": "MOR",
+    "3017MOR": {
         "fileName": "WarriorSCode",
         "name": "Warrior's Code",
         "releaseDate": "2008-02-01"
     },
-    {
-        "code": "7ED",
+    "30227ED": {
         "fileName": "WayWild",
         "name": "Way Wild",
         "releaseDate": "2001-04-11"
     },
-    {
-        "code": "CHK",
+    "3027CHK": {
         "fileName": "WayOfTheWarrior",
         "name": "Way of the Warrior",
         "releaseDate": "2004-10-01"
     },
-    {
-        "code": "M10",
+    "3032M10": {
         "fileName": "WeAreLegion",
         "name": "We Are Legion",
         "releaseDate": "2009-07-17"
     },
-    {
-        "code": "EMN",
+    "3037EMN": {
         "fileName": "WeaponsAndWards",
         "name": "Weapons and Wards",
         "releaseDate": "2016-07-22"
     },
-    {
-        "code": "PTK",
+    "3042PTK": {
         "fileName": "WeiKingdom",
         "name": "Wei Kingdom",
         "releaseDate": "1999-05-01"
     },
-    {
-        "code": "APC",
+    "3047APC": {
         "fileName": "Whirlpool",
         "name": "Whirlpool",
         "releaseDate": "2001-06-04"
     },
-    {
-        "code": "GNT",
+    "3052GNT": {
         "fileName": "White",
         "name": "White",
         "releaseDate": "2018-11-16"
     },
-    {
-        "code": "W16",
+    "3057W16": {
         "fileName": "WhiteDeck",
         "name": "White Deck",
         "releaseDate": "2016-04-08"
     },
-    {
-        "code": "M20",
+    "3062M20": {
         "fileName": "WhiteDeck",
         "name": "White Deck",
         "releaseDate": "2019-07-12"
     },
-    {
-        "code": "EXO",
+    "3067EXO": {
         "fileName": "WhiteHeatAdvancedDeck",
         "name": "White Heat - Advanced Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "EXO",
+    "3072EXO": {
         "fileName": "WhiteHeatBasicDeck",
         "name": "White Heat - Basic Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "MRD",
+    "3077MRD": {
         "fileName": "WickedBig",
         "name": "Wicked Big",
         "releaseDate": "2003-10-02"
     },
-    {
-        "code": "EXO",
+    "3082EXO": {
         "fileName": "WidowmakerAdvancedDeck",
         "name": "Widowmaker - Advanced Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "EXO",
+    "3087EXO": {
         "fileName": "WidowmakerBasicDeck",
         "name": "Widowmaker - Basic Deck",
         "releaseDate": "1998-06-15"
     },
-    {
-        "code": "ELD",
+    "3092ELD": {
         "fileName": "WildBounty",
         "name": "Wild Bounty",
         "releaseDate": "2019-10-04"
     },
-    {
-        "code": "M13",
+    "3097M13": {
         "fileName": "WildRush",
         "name": "Wild Rush",
         "releaseDate": "2012-07-13"
     },
-    {
-        "code": "VIS",
+    "3102VIS": {
         "fileName": "WildEyedFrenzy",
         "name": "Wild-Eyed Frenzy",
         "releaseDate": "2006-04-10"
     },
-    {
-        "code": "M15",
+    "3107M15": {
         "fileName": "WillOfTheMasses",
         "name": "Will Of The Masses",
         "releaseDate": "2014-07-18"
     },
-    {
-        "code": "DDU",
+    "3112DDU": {
         "fileName": "WoodlandWarriors",
         "name": "Woodland Warriors",
         "releaseDate": "2018-04-06"
     },
-    {
-        "code": "9ED",
+    "31179ED": {
         "fileName": "WorldAflame",
         "name": "World Aflame",
         "releaseDate": "2005-07-29"
     },
-    {
-        "code": "RTR",
+    "3122RTR": {
         "fileName": "WrackAndRage",
         "name": "Wrack and Rage",
         "releaseDate": "2012-10-26"
     },
-    {
-        "code": "JOU",
+    "3127JOU": {
         "fileName": "WrathOfTheMortals",
         "name": "Wrath of the Mortals",
         "releaseDate": "2014-05-23"
     },
-    {
-        "code": "PTK",
+    "3132PTK": {
         "fileName": "WuKingdom",
         "name": "Wu Kingdom",
         "releaseDate": "1999-05-01"
     },
-    {
-        "code": "RQS",
+    "3137RQS": {
         "fileName": "ZakkSFirstDeck",
         "name": "Zakk's First Deck",
         "releaseDate": "1996-06-10"
     },
-    {
-        "code": "ITP",
+    "3142ITP": {
         "fileName": "ZakkSFirstDeck",
         "name": "Zakk's First Deck",
         "releaseDate": "1996-12-31"
     },
-    {
-        "code": "RQS",
+    "3147RQS": {
         "fileName": "ZakkSSecondDeck",
         "name": "Zakk's Second Deck",
         "releaseDate": "1996-06-10"
     },
-    {
-        "code": "ITP",
+    "3152ITP": {
         "fileName": "ZakkSSecondDeck",
         "name": "Zakk's Second Deck",
         "releaseDate": "1996-12-31"
     },
-    {
-        "code": "DDP",
+    "3157DDP": {
         "fileName": "Zendikar",
         "name": "Zendikar",
         "releaseDate": "2015-08-28"
     },
-    {
-        "code": "BFZ",
+    "3162BFZ": {
         "fileName": "ZendikarSRage",
         "name": "Zendikar's Rage",
         "releaseDate": "2015-10-02"
     },
-    {
-        "code": "HOP",
+    "3167HOP": {
         "fileName": "ZombieEmpire",
         "name": "Zombie Empire",
         "releaseDate": "2009-09-04"
     },
-    {
-        "code": "LGN",
+    "3172LGN": {
         "fileName": "ZombiesUnleashed",
         "name": "Zombies Unleashed",
         "releaseDate": "2003-02-03"
     }
-]
+}
