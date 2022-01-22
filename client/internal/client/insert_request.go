@@ -5,7 +5,7 @@ import (
 	"client/internal/config"
 	"encoding/json"
 	"errors"
-	"fmt"
+	"io/ioutil"
 	"net/http"
 	"time"
 )
@@ -46,12 +46,11 @@ func insertRequest(body insertReq) (insertRsp, error) {
 		return insertRsp{}, errors.New("insert return code: " + resp.Status)
 	}
 
-	var respBytes []byte
-	if _, err = reqBody.Read(respBytes); err != nil {
+	respBytes, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
 		return insertRsp{}, errors.New("failed to read the response: " + err.Error())
 	}
 
-	fmt.Println(string(respBytes))
 	var responseBody insertRsp
 	if err := json.Unmarshal(respBytes, &responseBody); err != nil {
 		return insertRsp{}, errors.New("failed to unmarshal the response: " + err.Error())
