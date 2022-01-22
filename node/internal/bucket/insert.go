@@ -25,7 +25,7 @@ func (b Bucket) Insert(ctx context.Context, collection string, id string, value 
 
 	if mongo.IsDuplicateKeyError(err) {
 		// if the key exists already, update the record
-		_, err := coll.UpdateByID(ctx, id, doc)
+		_, err := coll.ReplaceOne(ctx, bson.M{"_id": id}, doc)
 		if err != nil {
 			return time.Time{}, err
 		}

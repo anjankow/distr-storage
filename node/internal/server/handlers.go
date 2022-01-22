@@ -34,7 +34,7 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusBadRequest, errors.New("invalid body: " + err.Error())
 	}
 
-	a.Logger.Debug("handling insert request", zap.String("id", body.ID), zap.String("content", string(body.Content)))
+	a.Logger.Debug("handling insert request", zap.String("id", body.ID))
 
 	insertedTime, err := a.Insert(r.Context(), body.Collection, body.ID, body.Content)
 	if err != nil {
