@@ -45,7 +45,7 @@ Request body:
 
     filters:
 
-    - `collection=test&key=favouriteMuffin`
+    - `key=favouriteMuffin`
     gets a single object from with the key "favouriteMuffin"
 
         Response body:
@@ -64,8 +64,8 @@ Request body:
     The reponse appends information about the node holding the given key.
 
 
-    - `collection=test&all=true`
-    gets all the objects belonging to the collection "test" from all the nodes in the network
+    - `all=true`
+    gets all the objects belonging to the preconfigured collection from all the nodes in the network
 
         Response body:
     ```json
@@ -109,7 +109,7 @@ Request body:
     }
     ```
 
- - DELETE `/doc?collection=test&key=redMuffin`
+ - DELETE `/doc?key=redMuffin`
     
     Response: status code
 
