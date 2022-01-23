@@ -168,7 +168,7 @@ func (t *Tester) randomlyRead(inputData map[string]interface{}) {
 		}
 		t.report.readFromNodes = append(t.report.readFromNodes, info)
 
-		t.logger.Info("value read", zap.String("key", key), zap.Any("value", value))
+		t.logger.Info("value read", zap.String("key", key), zap.Any("value", value), zap.String("node", nodeName))
 	}
 
 }
@@ -199,6 +199,8 @@ func (t *Tester) randomlyDelete(inputData map[string]interface{}) {
 			Timestamp: time.Now(),
 		}
 		t.report.deletedFromNodes = append(t.report.deletedFromNodes, info)
+
+		t.logger.Info("value deleted", zap.String("key", key), zap.String("node", nodeName))
 	}
 }
 
