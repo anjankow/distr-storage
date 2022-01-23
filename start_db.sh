@@ -20,7 +20,7 @@ do
     BUCKET_IDX=$(expr $i - 1)
 
     # prepare the services template for this bucket index
-    SERVICES="$(echo "${TEMPLATE}" | sed "s/@/$BUCKET_IDX/g")"
+    SERVICES="$(echo "${TEMPLATE}" | sed "s/{}/$BUCKET_IDX/g")"
 
     echo -e "${SERVICES}" >> docker-compose.yml
     echo -e "\n" >> docker-compose.yml

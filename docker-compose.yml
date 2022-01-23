@@ -46,8 +46,9 @@ services:
     depends_on:
       - mongo0
     container_name: node0
-    env_file:
-      - node/.env
+    environment:
+      - DB_URI=mongodb://root:example@mongo0:27017/
+      - DB_NAME=myDB
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
@@ -80,8 +81,9 @@ services:
     depends_on:
       - mongo1
     container_name: node1
-    env_file:
-      - node/.env
+    environment:
+      - DB_URI=mongodb://root:example@mongo1:27017/
+      - DB_NAME=myDB
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
@@ -114,8 +116,9 @@ services:
     depends_on:
       - mongo2
     container_name: node2
-    env_file:
-      - node/.env
+    environment:
+      - DB_URI=mongodb://root:example@mongo2:27017/
+      - DB_NAME=myDB
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated

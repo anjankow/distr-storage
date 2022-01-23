@@ -1,16 +1,16 @@
-  mongo@:
+  mongo{}:
     image: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
-      - /tmp/storage-system/db@:/data/db:rw
+      - /tmp/storage-system/db{}:/data/db:rw
       - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     networks:
-      - node@-network
+      - node{}-network
 
-  node@:
+  node{}:
     build:
       network: host
       context: .
@@ -20,13 +20,14 @@
     image: cc/node
     tty: true
     depends_on:
-      - mongo@
-    container_name: node@
-    env_file:
-      - node/.env
+      - mongo{}
+    container_name: node{}
+    environment:
+      - DB_URI=mongodb://root:example@mongo{}:27017/
+      - DB_NAME=myDB
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
     networks:
-      - node@-network
+      - node{}-network
       - api-network
