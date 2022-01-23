@@ -57,11 +57,13 @@ func main() {
 	test.Run(values)
 
 	file, err := os.Create("report.md")
+
 	report := test.GenerateReport()
 	if err != nil {
 		logger.Info("failed to create report file, the report will be displayed on the console")
 		fmt.Print(report)
 	} else {
+		logger.Info("report written to report.md")
 		file.WriteString(report)
 	}
 
