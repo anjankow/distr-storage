@@ -139,3 +139,19 @@ func (a App) GetAll() ([]byte, error) {
 
 	return combinedBin, nil
 }
+
+func (a App) Delete(key string) (string, error) {
+	nodeIdx, err := a.getNodeIdx(key)
+	if err != nil {
+		return "", err
+	}
+
+	node := a.nodes[nodeIdx]
+
+	err = node.Delete(a.collection, key)
+	if err != nil {
+		return "", err
+	}
+
+	return node.HostAddr, nil
+}

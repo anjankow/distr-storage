@@ -44,6 +44,11 @@ func (ser server) registerHandlers(router *mux.Router) {
 		Methods("GET").
 		Handler(appHandler{app: ser.app, Handle: get})
 
+	router.
+		Path("/doc").
+		Methods("DELETE").
+		Handler(appHandler{app: ser.app, Handle: delete})
+
 }
 
 func NewServer(logger *zap.Logger, a *app.App) server {

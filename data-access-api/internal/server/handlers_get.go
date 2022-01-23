@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"strings"
 
 	"go.uber.org/zap"
 )
@@ -25,6 +26,10 @@ func get(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	node, value, err := a.Get(key)
 	if err != nil {
+		if strings.Contains(err.Error(), "404 Not Found") {
+			return http.StatusNotFound, errors.New("KEY[" + key + "] not found")
+		}
+
 		return http.StatusInternalServerError, errors.New("KEY[" + key + "] get handler failed: " + err.Error())
 	}
 
