@@ -48,40 +48,13 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 	marshalledRsp, err := json.Marshal(response)
 	if err != nil {
 		a.Logger.Warn("failed to marshal time: "+err.Error(), zap.String("id", body.ID))
-	} else {
-		a.Logger.Debug("writing the response: " + string(marshalledRsp))
 	}
 
 	if _, err := w.Write(marshalledRsp); err != nil {
 		a.Logger.Warn("failed to write the response: "+err.Error(), zap.String("id", body.ID), zap.String("reponse", string(marshalledRsp)))
 	}
 
-	return 0, nil
-}
-
-func get(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
-
-	var id string
-	var collection string
-	if err := multierr.Combine(getDocumentID(r, &id), getCollection(r, &collection)); err != nil {
-		return http.StatusBadRequest, err
-	}
-
-	a.Logger.Debug("handling get request", zap.String("id", id), zap.String("collection", collection))
-
-	result, err := a.Get(r.Context(), collection, id)
-	if err != nil {
-		return http.StatusInternalServerError, errors.New("id[" + id + "] get handler failed: " + err.Error())
-	}
-
-	if result == nil {
-		a.Logger.Debug("writing status: not found", zap.String("id", id))
-		return http.StatusNotFound, errors.New("id[" + id + "] document not found")
-	}
-
-	w.Write(result)
-
-	return 0, nil
+	return http.StatusOK, nil
 }
 
 func delete(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
@@ -99,7 +72,7 @@ func delete(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 		return http.StatusInternalServerError, errors.New("id[" + id + "] delete handler failed: " + err.Error())
 	}
 
-	return 0, nil
+	return http.StatusOK, nil
 }
 
 func getCollection(r *http.Request, collection *string) error {

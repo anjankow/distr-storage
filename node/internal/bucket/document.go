@@ -1,7 +1,12 @@
 package bucket
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"time"
+)
 
 type Document struct {
-	Content json.RawMessage `bson:"content"`
+	ID        string          `bson:"_id"`
+	Timestamp time.Time       `bson:"timestamp"`
+	Content   json.RawMessage `bson:"content"`
 }

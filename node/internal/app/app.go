@@ -59,3 +59,31 @@ func (a App) Delete(ctx context.Context, collection string, id string) error {
 
 	return a.bucket.Delete(ctx, collection, id)
 }
+
+func (a App) GetAll(ctx context.Context, collection string) ([]json.RawMessage, error) {
+	result, err := a.bucket.GetAll(ctx, collection)
+	if err != nil {
+		return nil, err
+	}
+
+	a.Logger.Debug("got all documents from collection " + collection)
+
+	var combined []json.RawMessage
+	for _, res := range result {
+		bytes, err := json.Marshal(res)
+		if err != nil {
+			a.Logger.Warn("GetAll: failed to marshal doc: " + err.Error())
+			continue
+		}
+
+		var rawMessage json.RawMessage
+		if err := json.Unmarshal(bytes, &rawMessage); err != nil {
+			a.Logger.Warn("GetAll: failed to unmarshal doc to raw format: " + err.Error())
+			continue
+		}
+
+		combined = append(combined, rawMessage)
+	}
+
+	return combined, nil
+}
