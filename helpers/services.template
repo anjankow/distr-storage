@@ -7,6 +7,8 @@
     volumes:
       - /tmp/storage-system/db@:/data/db:rw
       - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node@-network
 
   node@:
     build:
@@ -25,3 +27,6 @@
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
+    networks:
+      - node@-network
+      - api-network

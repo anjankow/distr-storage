@@ -21,10 +21,22 @@ do
 
     # prepare the services template for this bucket index
     SERVICES="$(echo "${TEMPLATE}" | sed "s/@/$BUCKET_IDX/g")"
-    echo "${SERVICES}"
 
     echo -e "${SERVICES}" >> docker-compose.yml
     echo -e "\n" >> docker-compose.yml
+
+done
+
+# and define used networks in the end
+NETWORKS=$(cat helpers/networks.template)
+echo -e "${NETWORKS}" >> docker-compose.yml
+
+for i in $(seq 1 $BUCKET_NUM)
+do
+    BUCKET_IDX=$(expr $i - 1)
+
+    NETWORK="  node${BUCKET_IDX}-network:"
+    echo -e "${NETWORK}" >> docker-compose.yml
 
 done
 

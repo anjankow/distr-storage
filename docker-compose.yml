@@ -19,18 +19,9 @@ services:
     volumes:
       # to rebuild the app with air
       - ./data-access-api:/go/data-access-api:delegated
-
-  mongo-express0:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8087:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo0:27017/
-    depends_on:
-      - mongo0
+    networks:
+      - api-network
+      - external
   mongo0:
     image: mongo
     restart: always
@@ -40,6 +31,8 @@ services:
     volumes:
       - /tmp/storage-system/db0:/data/db:rw
       - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node0-network
 
   node0:
     build:
@@ -58,6 +51,9 @@ services:
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
+    networks:
+      - node0-network
+      - api-network
 
 
   mongo1:
@@ -69,6 +65,8 @@ services:
     volumes:
       - /tmp/storage-system/db1:/data/db:rw
       - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node1-network
 
   node1:
     build:
@@ -87,6 +85,9 @@ services:
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
+    networks:
+      - node1-network
+      - api-network
 
 
   mongo2:
@@ -98,6 +99,8 @@ services:
     volumes:
       - /tmp/storage-system/db2:/data/db:rw
       - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node2-network
 
   node2:
     build:
@@ -116,150 +119,16 @@ services:
     volumes:
       # to rebuild the app with air
       - ./node:/go/node:delegated
+    networks:
+      - node2-network
+      - api-network
 
 
-  mongo3:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - /tmp/storage-system/db3:/data/db:rw
-      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-
-  node3:
-    build:
-      network: host
-      context: .
-      dockerfile: deployment/go-services/Dockerfile
-      args:
-        SERVICE_NAME: "node"
-    image: cc/node
-    tty: true
-    depends_on:
-      - mongo3
-    container_name: node3
-    env_file:
-      - node/.env
-    volumes:
-      # to rebuild the app with air
-      - ./node:/go/node:delegated
 
 
-  mongo4:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - /tmp/storage-system/db4:/data/db:rw
-      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-
-  node4:
-    build:
-      network: host
-      context: .
-      dockerfile: deployment/go-services/Dockerfile
-      args:
-        SERVICE_NAME: "node"
-    image: cc/node
-    tty: true
-    depends_on:
-      - mongo4
-    container_name: node4
-    env_file:
-      - node/.env
-    volumes:
-      # to rebuild the app with air
-      - ./node:/go/node:delegated
-
-
-  mongo5:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - /tmp/storage-system/db5:/data/db:rw
-      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-
-  node5:
-    build:
-      network: host
-      context: .
-      dockerfile: deployment/go-services/Dockerfile
-      args:
-        SERVICE_NAME: "node"
-    image: cc/node
-    tty: true
-    depends_on:
-      - mongo5
-    container_name: node5
-    env_file:
-      - node/.env
-    volumes:
-      # to rebuild the app with air
-      - ./node:/go/node:delegated
-
-
-  mongo6:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - /tmp/storage-system/db6:/data/db:rw
-      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-
-  node6:
-    build:
-      network: host
-      context: .
-      dockerfile: deployment/go-services/Dockerfile
-      args:
-        SERVICE_NAME: "node"
-    image: cc/node
-    tty: true
-    depends_on:
-      - mongo6
-    container_name: node6
-    env_file:
-      - node/.env
-    volumes:
-      # to rebuild the app with air
-      - ./node:/go/node:delegated
-
-
-  mongo7:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - /tmp/storage-system/db7:/data/db:rw
-      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-
-  node7:
-    build:
-      network: host
-      context: .
-      dockerfile: deployment/go-services/Dockerfile
-      args:
-        SERVICE_NAME: "node"
-    image: cc/node
-    tty: true
-    depends_on:
-      - mongo7
-    container_name: node7
-    env_file:
-      - node/.env
-    volumes:
-      # to rebuild the app with air
-      - ./node:/go/node:delegated
-
-
+networks:
+  external:
+  api-network:
+  node0-network:
+  node1-network:
+  node2-network:

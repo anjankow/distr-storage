@@ -19,15 +19,6 @@ services:
     volumes:
       # to rebuild the app with air
       - ./data-access-api:/go/data-access-api:delegated
-
-  mongo-express0:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8087:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo0:27017/
-    depends_on:
-      - mongo0
+    networks:
+      - api-network
+      - external
