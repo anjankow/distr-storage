@@ -26,7 +26,7 @@ Is an entry point to the system. It serves as a directory service for the nodes.
 
 Response: status code
 
-The config request is used to configure the API application in runtime. `nodes` param informs about the addresses of all the nodes in the network.
+The config request is used to configure the API application in runtime. `nodes` param informs about the addresses of all the nodes in the network. The application sends a healtcheck to each of the nodes, waiting until they are responsive.
 
 - PUT `/doc`
 
@@ -135,3 +135,14 @@ There are 3 network defined in the docker-compose file:
 This layout allows for the following separation:
  - only node applications can access its mongo DB, they can't access the DBs belonging to another nodes
  - a client can't access the node applications directly, only through the api app
+
+## client
+
+The client package holds the implementation of a simple client and a tester class. 
+The tester is using the client to execute a test sequence and generate the report.
+
+To start the test:
+```sh
+cd client/
+task run
+```
