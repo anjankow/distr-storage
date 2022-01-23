@@ -31,7 +31,8 @@ func (a *App) Configure(collection string, nodes []string) {
 	// race condition, should be guarded with mutex, but for this use case I'll keep it this way
 	a.collection = collection
 
-	for _, nodeAddr := range nodes {
+	a.nodes = make([]nodeproxy.NodeProxy, len(nodes))
+	for i, nodeAddr := range nodes {
 		node := nodeproxy.NodeProxy{
 			HostAddr: nodeAddr,
 			Logger:   a.Logger,
@@ -39,7 +40,7 @@ func (a *App) Configure(collection string, nodes []string) {
 		a.Logger.Info(fmt.Sprint(nodeAddr, " waiting..."))
 		node.WaitReady()
 		a.Logger.Info(fmt.Sprint(nodeAddr, " ready"))
-		a.nodes = append(a.nodes, node)
+		a.nodes[i] = node
 	}
 }
 
@@ -101,8 +102,8 @@ func (a App) GetAll() ([]byte, error) {
 	var mutex sync.Mutex
 
 	type nodeData struct {
-		NodeName string
-		Data     json.RawMessage
+		NodeName string          `json:"node"`
+		Data     json.RawMessage `json:"data"`
 	}
 	var combined struct {
 		Data []nodeData `json:"node_data"`
