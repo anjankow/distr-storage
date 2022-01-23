@@ -127,6 +127,181 @@ services:
       - api-network
 
 
+  mongo3:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db3:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node3-network
+
+  node3:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "node"
+    image: cc/node
+    tty: true
+    depends_on:
+      - mongo3
+    container_name: node3
+    environment:
+      - DB_URI=mongodb://root:example@mongo3:27017/
+      - DB_NAME=myDB
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
+    networks:
+      - node3-network
+      - api-network
+
+
+  mongo4:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db4:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node4-network
+
+  node4:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "node"
+    image: cc/node
+    tty: true
+    depends_on:
+      - mongo4
+    container_name: node4
+    environment:
+      - DB_URI=mongodb://root:example@mongo4:27017/
+      - DB_NAME=myDB
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
+    networks:
+      - node4-network
+      - api-network
+
+
+  mongo5:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db5:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node5-network
+
+  node5:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "node"
+    image: cc/node
+    tty: true
+    depends_on:
+      - mongo5
+    container_name: node5
+    environment:
+      - DB_URI=mongodb://root:example@mongo5:27017/
+      - DB_NAME=myDB
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
+    networks:
+      - node5-network
+      - api-network
+
+
+  mongo6:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db6:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node6-network
+
+  node6:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "node"
+    image: cc/node
+    tty: true
+    depends_on:
+      - mongo6
+    container_name: node6
+    environment:
+      - DB_URI=mongodb://root:example@mongo6:27017/
+      - DB_NAME=myDB
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
+    networks:
+      - node6-network
+      - api-network
+
+
+  mongo7:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - /tmp/storage-system/db7:/data/db:rw
+      - ./deployment/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - node7-network
+
+  node7:
+    build:
+      network: host
+      context: .
+      dockerfile: deployment/go-services/Dockerfile
+      args:
+        SERVICE_NAME: "node"
+    image: cc/node
+    tty: true
+    depends_on:
+      - mongo7
+    container_name: node7
+    environment:
+      - DB_URI=mongodb://root:example@mongo7:27017/
+      - DB_NAME=myDB
+    volumes:
+      # to rebuild the app with air
+      - ./node:/go/node:delegated
+    networks:
+      - node7-network
+      - api-network
+
+
 
 
 networks:
@@ -135,3 +310,8 @@ networks:
   node0-network:
   node1-network:
   node2-network:
+  node3-network:
+  node4-network:
+  node5-network:
+  node6-network:
+  node7-network:
