@@ -56,7 +56,14 @@ func main() {
 	test := tester.NewTester(logger, &clnt)
 	test.Run(values)
 
-	fmt.Print(test.GenerateReport())
+	file, err := os.Create("report.md")
+	report := test.GenerateReport()
+	if err != nil {
+		logger.Info("failed to create report file, the report will be displayed on the console")
+		fmt.Print(report)
+	} else {
+		file.WriteString(report)
+	}
 
 	logger.Info("test finished", zap.Error(err))
 

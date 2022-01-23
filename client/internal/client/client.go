@@ -51,7 +51,19 @@ func (c Client) Get(key string) (value json.RawMessage, node string, err error) 
 }
 
 func (c Client) GetAllData() (data string, err error) {
-	return "all the data", nil
+	rspBody, err := getAllRequest()
+	if err != nil {
+		return "", err
+	}
+
+	// convert to json string
+	bytes, err := json.MarshalIndent(rspBody, "", "    ")
+	if err != nil {
+		c.logger.Warn("failed to beautify get all output: " + err.Error())
+		return string(rspBody), nil
+	}
+
+	return string(bytes), nil
 }
 
 func (c Client) GetRange() (node string, err error) {

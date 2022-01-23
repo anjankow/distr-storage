@@ -243,16 +243,24 @@ func (t Tester) GenerateReport() string {
 	for i, info := range t.report.insertedToNodes {
 		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
 	}
+	report += "\n"
 
 	report += "# Randomly reading the elements\n"
 	for i, info := range t.report.readFromNodes {
 		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
 	}
+	report += "\n"
 
 	report += "# Randomly deleting the elements\n"
 	for i, info := range t.report.deletedFromNodes {
 		report += fmt.Sprintf("%d) key: %s, node: %s, timestamp: %s\n", i, info.Key, info.NodeName, info.Timestamp.Format(time.RFC3339))
 	}
+	report += "\n"
+
+	report += "# All the inserted elements"
+	report += t.report.allInsertedData
+	report += "\n"
+	report += "\n"
 
 	return report
 }
