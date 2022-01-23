@@ -38,7 +38,12 @@ func (c Client) Insert(key string, value interface{}) (node string, err error) {
 }
 
 func (c Client) Delete(key string) (node string, err error) {
-	return "node0", nil
+	rspBody, err := deleteRequest(key)
+	if err != nil {
+		return "", err
+	}
+
+	return rspBody.NodeName, nil
 }
 
 func (c Client) Get(key string) (value json.RawMessage, node string, err error) {

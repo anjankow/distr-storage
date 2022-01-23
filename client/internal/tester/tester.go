@@ -190,7 +190,7 @@ func (t *Tester) randomlyDelete(inputData map[string]interface{}) {
 
 		nodeName, err := t.client.Delete(key)
 		if err != nil {
-			t.logger.Warn("failed to delete the element: %v" + key)
+			t.logger.Warn("failed to delete the element: "+key, zap.Error(err))
 		}
 
 		info := nodeOperation{
