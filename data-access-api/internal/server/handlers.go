@@ -35,5 +35,5 @@ func configure(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) 
 
 	a.Logger.Debug("updated configuration", zap.String("collection", body.Collection), zap.Any("nodes", body.Nodes))
 
-	return 0, nil
+	return http.StatusOK, nil
 }

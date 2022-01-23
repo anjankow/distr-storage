@@ -49,5 +49,5 @@ func insert(a *app.App, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	w.Write(marshalledRsp)
 
-	return 0, nil
+	return http.StatusOK, nil
 }

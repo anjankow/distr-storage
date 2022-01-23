@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"hash/adler32"
+	"sync"
 	"time"
 
 	"go.uber.org/zap"
@@ -92,4 +93,48 @@ func (a App) Get(key string) (string, json.RawMessage, error) {
 
 	return node.HostAddr, value, nil
 
+}
+
+func (a App) GetAll() ([]byte, error) {
+
+	var wg sync.WaitGroup
+	var mutex sync.Mutex
+
+	type nodeData struct {
+		NodeName string
+		Data     json.RawMessage
+	}
+	var combined struct {
+		Data []nodeData `json:"node_data"`
+	}
+	combined.Data = make([]nodeData, len(a.nodes))
+
+	for i := 0; i < len(a.nodes); i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			nodeIdx := i
+
+			node := a.nodes[nodeIdx]
+
+			data, err := node.GetAll(a.collection)
+			if err != nil {
+				a.Logger.Error("failed to getall from "+node.HostAddr, zap.Error(err))
+			}
+
+			mutex.Lock()
+			defer mutex.Unlock()
+
+			combined.Data[i].NodeName = node.HostAddr
+			combined.Data[i].Data = data
+		}(i)
+	}
+	wg.Wait()
+
+	combinedBin, err := json.Marshal(combined)
+	if err != nil {
+		return nil, errors.New("failed to marshal combined node response: " + err.Error())
+	}
+
+	return combinedBin, nil
 }
